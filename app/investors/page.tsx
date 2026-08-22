@@ -196,37 +196,35 @@ export default function InvestorsPage() {
 
 
         {/* CONTACT CTA */}
-        <div className="mt-12 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900 rounded-lg overflow-hidden shadow-lg border border-amber-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-12 items-center">
+        <div className="mt-12 bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-2xl overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-16 items-center">
             <div>
               <h3 className="text-4xl font-bold mb-4 leading-tight">Tem Dúvidas?</h3>
-              <p className="text-teal-100 mb-6 leading-relaxed">
-                Contacte o nosso departamento de relações com investidores para esclarecer qualquer questão ou obter informações adicionais sobre documentação e oportunidades de investimento.
+              <p className="text-blue-100 mb-8 leading-relaxed text-lg">
+                Contacte o nosso departamento de relações com investidores para esclarecer qualquer questão ou obter informações adicionais.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contacto" className="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition text-center">
+                <a href="/#contacto" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center shadow-lg hover:shadow-xl">
                   Contacte-nos
                 </a>
-                <a href="/#sobre" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-50 transition text-center border-2 border-blue-900">
+                <a href="/#sobre" className="inline-block bg-transparent text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:bg-opacity-10 transition text-center border-2 border-white">
                   Saiba Mais
                 </a>
               </div>
             </div>
-            <div className="hidden md:flex flex-col justify-center">
-              <div className="space-y-4">
-                <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
-                  <span className="text-3xl">📧</span>
-                  <div>
-                    <p className="font-bold text-gray-900">Email</p>
-                    <p className="text-sm text-gray-700">investidores@viladosnumeros.com</p>
-                  </div>
+            <div className="hidden md:flex flex-col justify-center gap-4">
+              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
+                <span className="text-3xl flex-shrink-0">📧</span>
+                <div>
+                  <p className="font-bold text-white">Email</p>
+                  <p className="text-sm text-blue-100">investidores@viladosnumeros.com</p>
                 </div>
-                <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
-                  <span className="text-3xl">📞</span>
-                  <div>
-                    <p className="font-bold text-gray-900">Telefone</p>
-                    <p className="text-sm text-gray-700">+351 913 040 032</p>
-                  </div>
+              </div>
+              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
+                <span className="text-3xl flex-shrink-0">📞</span>
+                <div>
+                  <p className="font-bold text-white">Telefone</p>
+                  <p className="text-sm text-blue-100">+351 913 040 032</p>
                 </div>
               </div>
             </div>

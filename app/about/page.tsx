@@ -147,35 +147,35 @@ export default function AboutPage() {
 
       {/* CTA SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900 rounded-lg overflow-hidden shadow-lg border border-amber-200 p-10">
+        <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-2xl overflow-hidden shadow-2xl p-10 md:p-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-4xl font-bold mb-4 leading-tight">Juntos Construímos</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-blue-100 mb-8 leading-relaxed text-lg">
                 Uma equipa de profissionais experientes dedicados a criar valor através de investimento imobiliário estratégico em Portugal.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contacto" className="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition text-center">
+                <a href="/#contacto" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center shadow-lg hover:shadow-xl">
                   Contacte-nos
                 </a>
-                <a href="/investors" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-50 transition text-center border-2 border-blue-900">
+                <a href="/investors" className="inline-block bg-transparent text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:bg-opacity-10 transition text-center border-2 border-white">
                   Investidores
                 </a>
               </div>
             </div>
-            <div className="hidden md:flex flex-col justify-center space-y-4">
-              <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
-                <span className="text-3xl">🎯</span>
+            <div className="hidden md:flex flex-col justify-center gap-4">
+              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
+                <span className="text-3xl flex-shrink-0">🎯</span>
                 <div>
-                  <p className="font-bold text-gray-900">Experiência</p>
-                  <p className="text-sm text-gray-700">Mais de 20 anos em gestão imobiliária</p>
+                  <p className="font-bold text-white">Experiência</p>
+                  <p className="text-sm text-blue-100">Mais de 20 anos em gestão imobiliária</p>
                 </div>
               </div>
-              <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
-                <span className="text-3xl">📈</span>
+              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
+                <span className="text-3xl flex-shrink-0">📈</span>
                 <div>
-                  <p className="font-bold text-gray-900">Resultados</p>
-                  <p className="text-sm text-gray-700">Portfólio de €8.7B em valor</p>
+                  <p className="font-bold text-white">Resultados</p>
+                  <p className="text-sm text-blue-100">Portfólio de €8.7B em valor</p>
                 </div>
               </div>
             </div>
