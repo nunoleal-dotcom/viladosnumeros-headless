@@ -550,7 +550,7 @@ export default function Home() {
             A Vila dos Números atua como sociedade de investimento imobiliário sob regime SIGI, perseguindo apreciação de capital de médio e longo prazo através da constituição e gestão estratégica de portfólio em Portugal.
           </p>
 
-          {/* INDICADORES - GRID 2x4 COM PROFUNDIDADE */}
+          {/* INDICADORES - GRID 2x4 COM PROFUNDIDADE - PADRONIZADO */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* PROJETOS */}
             <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
@@ -567,8 +567,8 @@ export default function Home() {
             </div>
 
             {/* OCUPAÇÃO */}
-            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-green-100 shadow-2xl hover:shadow-3xl hover:border-green-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="text-5xl font-bold text-green-600 mb-3">100%</div>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">100%</div>
               <p className="text-gray-800 font-bold text-lg">Taxa de Ocupação</p>
               <p className="text-sm text-gray-500 mt-3">Rentabilidade operacional</p>
             </div>
@@ -588,22 +588,22 @@ export default function Home() {
             </div>
 
             {/* REGIME SIGI */}
-            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-purple-100 shadow-2xl hover:shadow-3xl hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="text-4xl font-bold text-purple-700 mb-3">SIGI</div>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">SIGI</div>
               <p className="text-gray-800 font-bold text-lg">Regime Especial</p>
               <p className="text-sm text-gray-500 mt-3">Decreto-Lei 19/2019</p>
             </div>
 
             {/* REGIÕES */}
-            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-indigo-100 shadow-2xl hover:shadow-3xl hover:border-indigo-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="text-4xl font-bold text-indigo-700 mb-3">2</div>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">2</div>
               <p className="text-gray-800 font-bold text-lg">Regiões Estratégicas</p>
               <p className="text-sm text-gray-500 mt-3">Lisboa & Algarve</p>
             </div>
 
             {/* ANO FUNDAÇÃO */}
             <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="text-4xl font-bold text-blue-900 mb-3">2019</div>
+              <div className="text-5xl font-bold text-blue-900 mb-3">2019</div>
               <p className="text-gray-800 font-bold text-lg">Desde o Início</p>
               <p className="text-sm text-gray-500 mt-3">Crescimento consistente</p>
             </div>
