@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 async function getPages() {
   try {
@@ -84,6 +87,103 @@ const projects = [
   },
 ];
 
+// Client component for interactive projects section
+function ProjectsSection({ projects }: { projects: any[] }) {
+  const [selectedRegion, setSelectedRegion] = useState('all');
+
+  const filteredProjects = selectedRegion === 'all'
+    ? projects
+    : projects.filter(p => p.region === selectedRegion);
+
+  return (
+    <section id="projetos" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="mb-16">
+          <h2 className="text-5xl font-bold text-blue-900 mb-4">Nossos Projetos</h2>
+          <p className="text-xl text-gray-600">Portfolio de investimento imobiliário</p>
+        </div>
+
+        {/* FILTROS INTERATIVOS */}
+        <div className="flex gap-4 mb-12 overflow-x-auto pb-2">
+          <button
+            onClick={() => setSelectedRegion('all')}
+            className={`px-6 py-2 rounded font-medium transition whitespace-nowrap ${
+              selectedRegion === 'all'
+                ? 'bg-blue-900 text-white hover:bg-blue-800'
+                : 'border border-gray-300 text-gray-700 hover:border-blue-900'
+            }`}
+          >
+            Todos
+          </button>
+          <button
+            onClick={() => setSelectedRegion('lisboa')}
+            className={`px-6 py-2 rounded font-medium transition whitespace-nowrap ${
+              selectedRegion === 'lisboa'
+                ? 'bg-blue-900 text-white hover:bg-blue-800'
+                : 'border border-gray-300 text-gray-700 hover:border-blue-900'
+            }`}
+          >
+            Grande Lisboa
+          </button>
+          <button
+            onClick={() => setSelectedRegion('algarve')}
+            className={`px-6 py-2 rounded font-medium transition whitespace-nowrap ${
+              selectedRegion === 'algarve'
+                ? 'bg-blue-900 text-white hover:bg-blue-800'
+                : 'border border-gray-300 text-gray-700 hover:border-blue-900'
+            }`}
+          >
+            Algarve
+          </button>
+        </div>
+
+        {/* GRID DE PROJETOS FILTRADOS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="group cursor-pointer">
+              {/* Imagem do Projeto */}
+              <div className="relative overflow-hidden rounded-lg h-64 shadow-lg hover:shadow-2xl transition mb-4">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                {/* Overlay com informações */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-6">
+                  <div className="text-white">
+                    <p className="text-sm font-semibold text-blue-300 mb-1">{project.type}</p>
+                    <p className="text-lg font-bold">{project.name}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Informações do Card */}
+              <div className="mt-4">
+                <div className="flex items-start justify-between mb-2">
+                  <h4 className="text-lg font-bold text-blue-900 flex-1">{project.name}</h4>
+                  <span className="text-sm text-gray-500 whitespace-nowrap ml-2">📍 {project.location}</span>
+                </div>
+                <p className="text-blue-600 font-semibold text-xs mb-2 uppercase tracking-wide">{project.type}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
+                <button className="mt-4 text-blue-900 hover:text-blue-600 font-bold text-sm transition">
+                  Ver Detalhes →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mensagem quando não há resultados */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-600 text-lg">Nenhum projeto encontrado para esta região.</p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 export default async function Home() {
   const pages = await getPages();
   const posts = await getPosts();
@@ -139,64 +239,8 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* PROJETOS - NOVO DESIGN */}
-      <section id="projetos" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-blue-900 mb-4">Nossos Projetos</h2>
-            <p className="text-xl text-gray-600">Portfolio de investimento imobiliário</p>
-          </div>
-
-          {/* FILTROS */}
-          <div className="flex gap-4 mb-12 overflow-x-auto pb-2">
-            <button className="px-6 py-2 bg-blue-900 text-white rounded font-medium hover:bg-blue-800 transition whitespace-nowrap">
-              Todos
-            </button>
-            <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded font-medium hover:border-blue-900 transition whitespace-nowrap">
-              Grande Lisboa
-            </button>
-            <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded font-medium hover:border-blue-900 transition whitespace-nowrap">
-              Algarve
-            </button>
-          </div>
-
-          {/* GRID DE PROJETOS - COM IMAGENS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div key={project.id} className="group cursor-pointer">
-                {/* Imagem do Projeto */}
-                <div className="relative overflow-hidden rounded-lg h-64 shadow-lg hover:shadow-2xl transition mb-4">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                  {/* Overlay com informações */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-6">
-                    <div className="text-white">
-                      <p className="text-sm font-semibold text-blue-300 mb-1">{project.type}</p>
-                      <p className="text-lg font-bold">{project.name}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Informações do Card */}
-                <div className="mt-4">
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="text-lg font-bold text-blue-900 flex-1">{project.name}</h4>
-                    <span className="text-sm text-gray-500 whitespace-nowrap ml-2">📍 {project.location}</span>
-                  </div>
-                  <p className="text-blue-600 font-semibold text-xs mb-2 uppercase tracking-wide">{project.type}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
-                  <button className="mt-4 text-blue-900 hover:text-blue-600 font-bold text-sm transition">
-                    Ver Detalhes →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* PROJETOS COM FILTROS INTERATIVOS */}
+      <ProjectsSection projects={projects} />
 
       {/* EQUIPA */}
       <section id="equipa" className="py-24 bg-gray-50">
