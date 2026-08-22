@@ -164,6 +164,52 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* QUEM SOMOS SECTION */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-gray-50 to-blue-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-5xl font-bold text-center text-blue-900 mb-16">
+            Quem Somos
+          </h2>
+
+          {/* 3 CAIXAS COM CORES E PROFUNDIDADE */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* CAIXA 1 - AZUL */}
+            <div className="group bg-white rounded-2xl p-10 border-2 border-blue-200 shadow-2xl hover:shadow-3xl hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Objetivo</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Alcançar, numa perspetiva de médio e longo prazo, uma valorização crescente de capital através da constituição e gestão de uma carteira de valores predominantemente imobiliários.
+              </p>
+            </div>
+
+            {/* CAIXA 2 - VERDE */}
+            <div className="group bg-white rounded-2xl p-10 border-2 border-green-200 shadow-2xl hover:shadow-3xl hover:border-green-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <h3 className="text-2xl font-bold text-green-700 mb-4">Política de Investimento</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A aquisição e desenvolvimento de projetos de construção e reabilitação de edifícios para revenda ou arrendamento para comércio, serviços ou habitação.
+              </p>
+            </div>
+
+            {/* CAIXA 3 - ROXO */}
+            <div className="group bg-white rounded-2xl p-10 border-2 border-purple-200 shadow-2xl hover:shadow-3xl hover:border-purple-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">Localização Estratégica</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Investimento em imóveis urbanos, rústicos ou mistos em âmbito nacional, com enfoque nas zonas de Grande Lisboa e Algarve.
+              </p>
+            </div>
+          </div>
+
+          {/* DESCRIÇÃO PRINCIPAL */}
+          <div className="bg-white rounded-2xl p-12 border-2 border-indigo-200 shadow-2xl">
+            <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+              <span className="font-bold text-indigo-900">Vila dos Números – SIGI, S.A.</span>, é uma sociedade portuguesa que opera sob o regime tributário especial SIGI (Sociedades de Investimento e Gestão Imobiliária) e tem como regulamentação o Decreto-Lei nº 19/2019, de 28 de Janeiro.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              O compromisso da Vila dos Números é investir em propriedades imobiliárias de qualidade, criando valor sustentável e gerando retornos consistentes para os nossos investidores através de gestão profissional e excelência operacional.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA SECTION */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
