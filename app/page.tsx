@@ -474,8 +474,12 @@ export default function Home() {
       <header className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           {/* Logo Section */}
-          <a href="#" className="flex items-center gap-3 hover:opacity-80 transition">
+          <a href="#" className="flex items-center gap-4 hover:opacity-80 transition">
             <img src="/logo.png" alt="Vila dos Números" className="h-16 w-auto" />
+            <div className="hidden sm:block border-l border-gray-300 pl-4">
+              <p className="text-sm font-bold text-blue-900">Vila dos Números – SIGI, S.A.</p>
+              <p className="text-xs text-gray-600 tracking-wide">PROPERTY DEVELOPMENT</p>
+            </div>
           </a>
 
           {/* Navigation */}
