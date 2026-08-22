@@ -128,13 +128,15 @@ const projects = [
     type: 'Turismo em Espaço Rural',
     description: 'Projeto de turismo em espaço rural com potencial significativo. Localizado em zona de elevado valor paisagístico.',
     locationDescription: 'O imóvel localiza-se na localidade de Patã de Cima, a 3 km de Boliqueime, numa zona considerada rural composta por moradias isoladas a norte da N125 – via confrontante. O imóvel encontra-se localizado a cerca de 10 km de Albufeira, com todo o comércio e serviços que a cidade turística tem para oferecer a menos de 10 km de Vilamoura, localidade igualmente turística, com praias e destinado e ocupado essencialmente por segunda habitação, com comércio direcionado para a atividade turística. A zona está servida de excelentes acessos, a cerca de 32 km do Aeroporto de Faro e a menos de 6 km do nó de acesso da A22',
-    image: '/images/properties/VARANDA.jpg',
+    image: '/images/properties/boliqueime-exterior-1.jpg',
     gallery: [
-      '/images/properties/VARANDA.jpg',
-      '/images/properties/SALA-JANTAR.jpg',
-      '/images/properties/SALA-ESTAR.jpg',
-      '/images/properties/LOUNGE.jpg',
-      '/images/properties/01_RUA-02.jpg'
+      '/images/properties/boliqueime-exterior-1.jpg',
+      '/images/properties/boliqueime-bedroom.jpg',
+      '/images/properties/boliqueime-courtyard.jpg',
+      '/images/properties/boliqueime-pool-area.jpg',
+      '/images/properties/boliqueime-patio.jpg',
+      '/images/properties/boliqueime-exterior-2.jpg',
+      '/images/properties/boliqueime-common-area.jpg'
     ],
     details: {
       coordinates: '37°07\'21.8"N 8°10\'54.8"W',
