@@ -169,10 +169,13 @@ export default function InvestorsPage() {
         <div className="space-y-2">
           {getDocuments().length > 0 ? (
             getDocuments().map((doc, index) => (
-              <a
+              <button
                 key={index}
-                href="#"
-                className="flex items-center gap-4 bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md hover:border-teal-300 transition group"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert(`Download: ${doc.title}`);
+                }}
+                className="w-full text-left flex items-center gap-4 bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md hover:border-teal-300 transition group cursor-pointer"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition">
                   <span className="text-2xl">📄</span>
@@ -184,7 +187,7 @@ export default function InvestorsPage() {
                 <div className="flex-shrink-0 text-gray-400 group-hover:text-teal-600 transition">
                   →
                 </div>
-              </a>
+              </button>
             ))
           ) : (
             <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
