@@ -1,66 +1,74 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function AboutPage() {
-  const metrics = [
-    {
-      number: '6',
-      label: 'Projectos em Portfólio',
-      description: 'Investimentos imobiliários estratégicos'
-    },
-    {
-      number: '270K',
-      label: 'm² Totais Desenvolvidos',
-      description: 'Área de construção utilizada'
-    },
-    {
-      number: '100%',
-      label: 'Taxa de Ocupação',
-      description: 'Rentabilidade operacional comprovada'
-    },
-    {
-      number: '6%',
-      label: 'Dividend Yield Médio',
-      description: 'Retorno anualizado aos investidores'
-    },
-    {
-      number: '€8.7B',
-      label: 'Valor de Portfólio',
-      description: 'Avaliação total 2024'
-    },
-    {
-      number: 'SIGI',
-      label: 'Regime Especial',
-      description: 'Decreto-Lei 19/2019'
-    },
-    {
-      number: '2',
-      label: 'Regiões Estratégicas',
-      description: 'Lisboa e Algarve'
-    },
-    {
-      number: '2019',
-      label: 'Desde o Início',
-      description: 'Crescimento consistente'
-    }
-  ];
+  const [activeTab, setActiveTab] = useState('administracao');
+
+  const teamMembers = {
+    administracao: [
+      {
+        name: 'Cláudia Daniela Constance Leal',
+        role: 'Presidente do Conselho de Administração',
+        date: '15/03/1977',
+        bio: 'Administradora na Sociedade Vila dos Números SIGI, S.A. com responsabilidade em Direção Geral de Investimentos, Recursos Humanos e Comunicação.'
+      },
+      {
+        name: 'Ana Lúcia Jardim Leal',
+        role: 'Vogal do Conselho de Administração',
+        date: '28/09/1977',
+        bio: 'CEO da EDINOK, Mestre em Gestão de Projetos. Responsável por Direção Fiscal e Financeira e Direção Comercial.'
+      }
+    ],
+    gestao: [
+      {
+        name: 'Cláudia Daniela Constance Leal',
+        role: 'Direção de Investimentos',
+        date: 'Desde 2018',
+        bio: 'Gestão estratégica de portfólio imobiliário e relações internacionais.'
+      },
+      {
+        name: 'Ana Lúcia Jardim Leal',
+        role: 'Direção Financeira',
+        date: 'Desde 2022',
+        bio: 'Gestão fiscal, financeira e planejamento comercial.'
+      }
+    ]
+  };
+
+  const getMembers = () => {
+    return teamMembers[activeTab as keyof typeof teamMembers] || [];
+  };
 
   return (
     <div className="min-h-screen bg-white">
       {/* HEADER */}
       <header className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
+          <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition">
             <img src="/logo.png" alt="Vila dos Números" className="h-16 w-auto" />
+            <div className="hidden sm:block border-l border-gray-300 pl-4">
+              <p className="text-sm font-bold text-blue-900">Vila dos Números – SIGI, S.A.</p>
+              <p className="text-xs text-gray-600 tracking-wide">PROPERTY DEVELOPMENT</p>
+            </div>
           </Link>
-
           <nav className="flex gap-8 items-center">
-            <Link href="/#sobre" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">SOBRE</Link>
-            <Link href="/#projetos" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">PROJETOS</Link>
-            <Link href="/#equipa" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">EQUIPA</Link>
-            <Link href="/investors" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">INVESTIDORES</Link>
-            <Link href="/#contacto" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">CONTACTO</Link>
+            <a href="/#sobre" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
+              SOBRE
+            </a>
+            <a href="/#projetos" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
+              PROJETOS
+            </a>
+            <a href="/#equipa" className="text-gray-900 transition text-sm font-semibold uppercase tracking-wide border-b-2 border-gray-900">
+              EQUIPA
+            </a>
+            <a href="/investors" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
+              INVESTIDORES
+            </a>
+            <a href="/#contacto" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
+              CONTACTO
+            </a>
 
             <div className="flex gap-3 ml-4 pl-4 border-l border-gray-200">
               <a href="#" className="text-gray-800 font-bold text-xs hover:text-gray-600 transition">PT</a>
@@ -73,171 +81,110 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6">
-            Vila dos Números, S.A.
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
-            Uma Sociedade de Investimento e Gestão Imobiliária (SIGI) atuando no setor multifamiliar, focado no desenvolvimento, reabilitação, aquisição e gestão de comunidades residenciais em Portugal.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Perseguindo apreciação de capital através da constituição e gestão estratégica de portfólio imobiliário de qualidade em Portugal.
-          </p>
+      {/* HERO */}
+      <section className="relative h-32 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=200&fit=crop"
+          alt="Equipa"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto px-6 w-full">
+            <h2 className="text-2xl font-bold text-white">Administração</h2>
+            <p className="text-xs text-gray-100 mt-1">
+              Conheça a equipa de liderança da Vila dos Números
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* KEY METRICS SECTION */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-20">
-            Indicadores Chave
-          </h2>
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* TABS */}
+        <div className="flex gap-1 mb-8 border-b-2 border-gray-300 overflow-x-auto pb-4">
+          <button
+            onClick={() => setActiveTab('administracao')}
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+              activeTab === 'administracao'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
+            }`}
+          >
+            Administração
+          </button>
+          <button
+            onClick={() => setActiveTab('gestao')}
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+              activeTab === 'gestao'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
+            }`}
+          >
+            Gestão
+          </button>
+        </div>
 
-          {/* Grid 4 colunas - 2 linhas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            {metrics.map((metric, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border border-gray-200 rounded-lg p-10 hover:shadow-lg transition duration-300"
-              >
-                {/* Número Grande */}
-                <div className="mb-6">
-                  <p className="text-5xl md:text-6xl font-bold text-blue-900">
-                    {metric.number}
-                  </p>
+        {/* TEAM MEMBERS */}
+        <div className="space-y-4">
+          {getMembers().map((member, index) => (
+            <div key={index} className="bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md transition">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-xl">👤</span>
                 </div>
-
-                {/* Label */}
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {metric.label}
-                </h3>
-
-                {/* Descrição */}
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {metric.description}
-                </p>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-gray-900 leading-tight">{member.name}</h3>
+                  <p className="text-sm text-blue-900 font-semibold leading-tight">{member.role}</p>
+                  <p className="text-xs text-gray-500 leading-tight">{member.date}</p>
+                  <p className="text-sm text-gray-600 mt-1">{member.bio}</p>
+                </div>
               </div>
-            ))}
-          </div>
-
-          {/* Data Footer */}
-          <div className="text-center pt-12 border-t border-gray-200">
-            <p className="text-sm text-gray-500">
-              Dados e informação em 22 de Agosto de 2026
-            </p>
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-
-      {/* ABOUT DETAILS SECTION */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* LEFT COLUMN */}
-            <div>
-              <h3 className="text-3xl font-bold text-blue-900 mb-6">
-                A Nossa Missão
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Vila dos Números compromete-se com o desenvolvimento e gestão de propriedades imobiliárias de qualidade superior, criando comunidades residenciais sustentáveis que melhoram a qualidade de vida dos seus residentes.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Através de investimentos estratégicos e gestão profissional, buscamos gerar retornos consistentes para os nossos investidores enquanto mantemos os mais altos padrões de excelência operacional.
-              </p>
-            </div>
-
-            {/* RIGHT COLUMN */}
-            <div>
-              <h3 className="text-3xl font-bold text-blue-900 mb-6">
-                A Nossa Visão
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Ser reconhecida como uma das principais sociedades de investimento imobiliário em Portugal, conhecida pela qualidade dos seus projectos, transparência na gestão e compromisso com a sustentabilidade.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Expandir o portfólio através de oportunidades estratégicas que ofereçam valor superior aos investidores e contribuam positivamente para o desenvolvimento urbano em Portugal.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* QUEM SOMOS SECTION */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-gray-50 to-blue-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-blue-900 mb-16">
-            Quem Somos
-          </h2>
-
-          {/* 3 CAIXAS COM CORES E PROFUNDIDADE */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {/* CAIXA 1 - AZUL */}
-            <div className="group bg-white rounded-2xl p-10 border-2 border-blue-200 shadow-2xl hover:shadow-3xl hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">Objetivo</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Alcançar, numa perspetiva de médio e longo prazo, uma valorização crescente de capital através da constituição e gestão de uma carteira de valores predominantemente imobiliários.
-              </p>
-            </div>
-
-            {/* CAIXA 2 - VERDE */}
-            <div className="group bg-white rounded-2xl p-10 border-2 border-green-200 shadow-2xl hover:shadow-3xl hover:border-green-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-green-700 mb-4">Política de Investimento</h3>
-              <p className="text-gray-700 leading-relaxed">
-                A aquisição e desenvolvimento de projetos de construção e reabilitação de edifícios para revenda ou arrendamento para comércio, serviços ou habitação.
-              </p>
-            </div>
-
-            {/* CAIXA 3 - ROXO */}
-            <div className="group bg-white rounded-2xl p-10 border-2 border-purple-200 shadow-2xl hover:shadow-3xl hover:border-purple-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-purple-700 mb-4">Localização Estratégica</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Investimento em imóveis urbanos, rústicos ou mistos em âmbito nacional, com enfoque nas zonas de Grande Lisboa e Algarve.
-              </p>
-            </div>
-          </div>
-
-          {/* DESCRIÇÃO PRINCIPAL */}
-          <div className="bg-white rounded-2xl p-12 border-2 border-indigo-200 shadow-2xl">
-            <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-              <span className="font-bold text-indigo-900">Vila dos Números – SIGI, S.A.</span>, é uma sociedade portuguesa que opera sob o regime tributário especial SIGI (Sociedades de Investimento e Gestão Imobiliária) e tem como regulamentação o Decreto-Lei nº 19/2019, de 28 de Janeiro.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              O compromisso da Vila dos Números é investir em propriedades imobiliárias de qualidade, criando valor sustentável e gerando retornos consistentes para os nossos investidores através de gestão profissional e excelência operacional.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Descubra os Nossos Projectos
-          </h2>
-          <p className="text-xl text-blue-100 mb-10">
-            Conheça em detalhe o nosso portfólio de investimento imobiliário
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="/#projetos"
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition"
-            >
-              Ver Projetos
-            </a>
-            <a
-              href="/investors"
-              className="bg-transparent text-white px-8 py-4 rounded-lg font-bold border-2 border-white hover:bg-blue-800 transition"
-            >
-              Para Investidores
-            </a>
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900 rounded-lg overflow-hidden shadow-lg border border-amber-200 p-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-4xl font-bold mb-4 leading-tight">Juntos Construímos</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Uma equipa de profissionais experientes dedicados a criar valor através de investimento imobiliário estratégico em Portugal.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/#contacto" className="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition text-center">
+                  Contacte-nos
+                </a>
+                <a href="/investors" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-50 transition text-center border-2 border-blue-900">
+                  Investidores
+                </a>
+              </div>
+            </div>
+            <div className="hidden md:flex flex-col justify-center space-y-4">
+              <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
+                <span className="text-3xl">🎯</span>
+                <div>
+                  <p className="font-bold text-gray-900">Experiência</p>
+                  <p className="text-sm text-gray-700">Mais de 20 anos em gestão imobiliária</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
+                <span className="text-3xl">📈</span>
+                <div>
+                  <p className="font-bold text-gray-900">Resultados</p>
+                  <p className="text-sm text-gray-700">Portfólio de €8.7B em valor</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* FOOTER */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p>&copy; 2026 Vila dos Números, SIGI S.A. Todos os direitos reservados.</p>
           <p className="text-gray-400 text-sm mt-2">Investimento imobiliário de qualidade em Portugal</p>

@@ -169,12 +169,10 @@ export default function InvestorsPage() {
         <div className="space-y-2">
           {getDocuments().length > 0 ? (
             getDocuments().map((doc, index) => (
-              <button
+              <a
                 key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert(`Download: ${doc.title}`);
-                }}
+                href={`/documents/${doc.title.toLowerCase().replace(/\s+/g, '-')}.pdf`}
+                download
                 className="w-full text-left flex items-center gap-4 bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md hover:border-teal-300 transition group cursor-pointer"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition">
@@ -187,7 +185,7 @@ export default function InvestorsPage() {
                 <div className="flex-shrink-0 text-gray-400 group-hover:text-teal-600 transition">
                   →
                 </div>
-              </button>
+              </a>
             ))
           ) : (
             <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
@@ -198,7 +196,7 @@ export default function InvestorsPage() {
 
 
         {/* CONTACT CTA */}
-        <div className="mt-12 bg-gradient-to-br from-teal-700 via-teal-600 to-teal-500 text-white rounded-lg overflow-hidden shadow-lg">
+        <div className="mt-12 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900 rounded-lg overflow-hidden shadow-lg border border-amber-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-12 items-center">
             <div>
               <h3 className="text-4xl font-bold mb-4 leading-tight">Tem Dúvidas?</h3>
@@ -206,28 +204,28 @@ export default function InvestorsPage() {
                 Contacte o nosso departamento de relações com investidores para esclarecer qualquer questão ou obter informações adicionais sobre documentação e oportunidades de investimento.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contacto" className="inline-block bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition text-center">
+                <a href="/#contacto" className="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition text-center">
                   Contacte-nos
                 </a>
-                <a href="/#sobre" className="inline-block bg-teal-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-teal-900 transition text-center border-2 border-white">
+                <a href="/#sobre" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-50 transition text-center border-2 border-blue-900">
                   Saiba Mais
                 </a>
               </div>
             </div>
             <div className="hidden md:flex flex-col justify-center">
               <div className="space-y-4">
-                <div className="flex gap-4 items-start bg-teal-600 bg-opacity-50 p-4 rounded-lg">
+                <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
                   <span className="text-3xl">📧</span>
                   <div>
-                    <p className="font-bold">Email</p>
-                    <p className="text-sm text-teal-100">investidores@viladosnumeros.com</p>
+                    <p className="font-bold text-gray-900">Email</p>
+                    <p className="text-sm text-gray-700">investidores@viladosnumeros.com</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start bg-teal-600 bg-opacity-50 p-4 rounded-lg">
+                <div className="flex gap-4 items-start bg-white bg-opacity-40 p-4 rounded-lg border border-amber-100">
                   <span className="text-3xl">📞</span>
                   <div>
-                    <p className="font-bold">Telefone</p>
-                    <p className="text-sm text-teal-100">+351 913 040 032</p>
+                    <p className="font-bold text-gray-900">Telefone</p>
+                    <p className="text-sm text-gray-700">+351 913 040 032</p>
                   </div>
                 </div>
               </div>
