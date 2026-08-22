@@ -87,10 +87,21 @@ export default function InvestorsPage() {
       {/* HERO */}
       <section className="bg-white border-b-2 border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Acionistas e Investidores</h2>
-          <p className="text-lg text-gray-700">
-            Informação corporativa, documentação legal e relatórios financeiros
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Acionistas e Investidores</h2>
+              <p className="text-lg text-gray-700">
+                Informação corporativa, documentação legal e relatórios financeiros
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg h-64 md:h-auto">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop"
+                alt="Portfólio de Projetos"
+                className="w-full h-full object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
