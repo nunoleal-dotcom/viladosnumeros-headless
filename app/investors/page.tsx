@@ -195,37 +195,22 @@ export default function InvestorsPage() {
         </div>
 
 
-        {/* CONTACT CTA */}
-        <div className="mt-12 bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-2xl overflow-hidden shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-16 items-center">
-            <div>
-              <h3 className="text-4xl font-bold mb-4 leading-tight">Tem Dúvidas?</h3>
-              <p className="text-blue-100 mb-8 leading-relaxed text-lg">
-                Contacte o nosso departamento de relações com investidores para esclarecer qualquer questão ou obter informações adicionais.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contacto" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition text-center shadow-lg hover:shadow-xl">
-                  Contacte-nos
-                </a>
-                <a href="/#sobre" className="inline-block bg-transparent text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:bg-opacity-10 transition text-center border-2 border-white">
-                  Saiba Mais
-                </a>
+        {/* CONTACT INFO */}
+        <div className="mt-16 bg-white rounded-lg border border-gray-200 p-8">
+          <h3 className="text-2xl font-bold text-blue-900 mb-6">Contacte-nos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-start gap-4">
+              <span className="text-2xl flex-shrink-0">📧</span>
+              <div>
+                <p className="text-sm text-gray-600 font-semibold uppercase">Email</p>
+                <p className="text-gray-900 font-medium">investidores@viladosnumeros.com</p>
               </div>
             </div>
-            <div className="hidden md:flex flex-col justify-center gap-4">
-              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
-                <span className="text-3xl flex-shrink-0">📧</span>
-                <div>
-                  <p className="font-bold text-white">Email</p>
-                  <p className="text-sm text-blue-100">investidores@viladosnumeros.com</p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-start bg-white bg-opacity-15 p-5 rounded-xl border border-white border-opacity-30 backdrop-blur-sm hover:bg-opacity-25 transition shadow-lg">
-                <span className="text-3xl flex-shrink-0">📞</span>
-                <div>
-                  <p className="font-bold text-white">Telefone</p>
-                  <p className="text-sm text-blue-100">+351 913 040 032</p>
-                </div>
+            <div className="flex items-start gap-4">
+              <span className="text-2xl flex-shrink-0">📞</span>
+              <div>
+                <p className="text-sm text-gray-600 font-semibold uppercase">Telefone</p>
+                <p className="text-gray-900 font-medium">+351 913 040 032</p>
               </div>
             </div>
           </div>
