@@ -521,75 +521,79 @@ export default function Home() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white text-3xl">↓</div>
       </section>
 
-      {/* SOBRE COM BACKGROUND */}
-      <section id="sobre" className="relative py-32 bg-cover bg-center" style={{ backgroundImage: 'url(/images/about-bg.jpg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-white/80"></div>
+      {/* SOBRE COM BACKGROUND ELEGANTE */}
+      <section id="sobre" className="relative py-32 bg-gradient-to-br from-blue-50 via-gray-50 to-blue-100">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="relative max-w-7xl mx-auto px-4">
           <h2 className="text-5xl font-bold mb-8 text-blue-900 text-center">Vila dos Números - Quem Somos</h2>
-          <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-700 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
             A Vila dos Números atua como sociedade de investimento imobiliário sob regime SIGI, perseguindo apreciação de capital de médio e longo prazo através da constituição e gestão estratégica de portfólio em Portugal.
           </p>
 
-          {/* INDICADORES - GRID 2x4 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {/* INDICADORES - GRID 2x4 COM PROFUNDIDADE */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* PROJETOS */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-4xl font-bold text-blue-900 mb-2">6</div>
-              <p className="text-gray-700 font-semibold">Projetos em Portfólio</p>
-              <p className="text-sm text-gray-600 mt-2">Lisboa & Algarve</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">6</div>
+              <p className="text-gray-800 font-bold text-lg">Projetos em Portfólio</p>
+              <p className="text-sm text-gray-500 mt-3">Lisboa & Algarve</p>
             </div>
 
             {/* ÁREA */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-4xl font-bold text-blue-900 mb-2">270K</div>
-              <p className="text-gray-700 font-semibold">m² Totais</p>
-              <p className="text-sm text-gray-600 mt-2">Área desenvolvida</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">270K</div>
+              <p className="text-gray-800 font-bold text-lg">m² Totais</p>
+              <p className="text-sm text-gray-500 mt-3">Área desenvolvida</p>
             </div>
 
             {/* OCUPAÇÃO */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
-              <p className="text-gray-700 font-semibold">Taxa de Ocupação</p>
-              <p className="text-sm text-gray-600 mt-2">Rentabilidade operacional</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-green-100 shadow-2xl hover:shadow-3xl hover:border-green-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-green-600 mb-3">100%</div>
+              <p className="text-gray-800 font-bold text-lg">Taxa de Ocupação</p>
+              <p className="text-sm text-gray-500 mt-3">Rentabilidade operacional</p>
             </div>
 
             {/* DIVIDEND YIELD */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-4xl font-bold text-blue-900 mb-2">6%</div>
-              <p className="text-gray-700 font-semibold">Dividend Yield</p>
-              <p className="text-sm text-gray-600 mt-2">Retorno anualizado</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">6%</div>
+              <p className="text-gray-800 font-bold text-lg">Dividend Yield</p>
+              <p className="text-sm text-gray-500 mt-3">Retorno anualizado</p>
             </div>
 
             {/* VALOR TOTAL */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-4xl font-bold text-blue-900 mb-2">€8.7B</div>
-              <p className="text-gray-700 font-semibold">Valor de Portfólio</p>
-              <p className="text-sm text-gray-600 mt-2">Avaliação total 2024</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-900 mb-3">€8.7B</div>
+              <p className="text-gray-800 font-bold text-lg">Valor de Portfólio</p>
+              <p className="text-sm text-gray-500 mt-3">Avaliação total 2024</p>
             </div>
 
             {/* REGIME SIGI */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-2xl font-bold text-blue-900 mb-2">SIGI</div>
-              <p className="text-gray-700 font-semibold">Regime Especial</p>
-              <p className="text-sm text-gray-600 mt-2">Decreto-Lei 19/2019</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-purple-100 shadow-2xl hover:shadow-3xl hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-4xl font-bold text-purple-700 mb-3">SIGI</div>
+              <p className="text-gray-800 font-bold text-lg">Regime Especial</p>
+              <p className="text-sm text-gray-500 mt-3">Decreto-Lei 19/2019</p>
             </div>
 
             {/* REGIÕES */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-2xl font-bold text-blue-900 mb-2">2</div>
-              <p className="text-gray-700 font-semibold">Regiões Estratégicas</p>
-              <p className="text-sm text-gray-600 mt-2">Lisboa & Algarve</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-indigo-100 shadow-2xl hover:shadow-3xl hover:border-indigo-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-4xl font-bold text-indigo-700 mb-3">2</div>
+              <p className="text-gray-800 font-bold text-lg">Regiões Estratégicas</p>
+              <p className="text-sm text-gray-500 mt-3">Lisboa & Algarve</p>
             </div>
 
             {/* ANO FUNDAÇÃO */}
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition">
-              <div className="text-2xl font-bold text-blue-900 mb-2">2019</div>
-              <p className="text-gray-700 font-semibold">Desde o Início</p>
-              <p className="text-sm text-gray-600 mt-2">Crescimento consistente</p>
+            <div className="group bg-white rounded-2xl p-10 text-center border-2 border-blue-100 shadow-2xl hover:shadow-3xl hover:border-blue-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+              <div className="text-4xl font-bold text-blue-900 mb-3">2019</div>
+              <p className="text-gray-800 font-bold text-lg">Desde o Início</p>
+              <p className="text-sm text-gray-500 mt-3">Crescimento consistente</p>
             </div>
           </div>
 
-          <p className="text-center text-gray-600 text-sm">Dados e informação a 22/08/2026.</p>
+          <p className="text-center text-gray-600 text-sm mt-8">Dados e informação a 22/08/2026.</p>
         </div>
       </section>
 
