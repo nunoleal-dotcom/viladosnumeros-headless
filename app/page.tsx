@@ -465,16 +465,22 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO COM IMAGEM DE FUNDO */}
-      <section
-        className="relative min-h-screen bg-cover bg-center flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: 'url(/images/properties/img-ourique.jpg)',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      {/* HERO COM VÍDEO DE FUNDO */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        {/* Vídeo de Fundo */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
