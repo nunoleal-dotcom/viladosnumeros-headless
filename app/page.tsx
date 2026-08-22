@@ -14,6 +14,7 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação',
     description: 'Propriedade Total, composto por R/C, 1º andar, 2º andar e águas-furtadas. 239 m² de área de construção. Totalmente renovado.',
+    locationDescription: 'Prédio urbano, inserido numa zona estabilizada e residencial de 1ª habitação onde ocorrem outros tipos de ocupação compatíveis com habitação servida de todo o tipo de equipamentos, serviços e comércio local bem como alojamento local (turismo)',
     image: '/images/properties/campo-ourique-1.jpg',
     gallery: [
       '/images/properties/campo-ourique-1.jpg',
@@ -43,6 +44,7 @@ const projects = [
     region: 'lisboa',
     type: 'Serviços',
     description: 'Fração autónoma destinada a serviços, composta por open space, zona de copa, duas instalações sanitárias e varanda. 139 m² de área útil.',
+    locationDescription: 'A zona envolvente é essencialmente habitacional de 1ª habitação com edifícios multifamiliares com cérceas de 5 a 7 pisos em Zona servida de diversidade abrangente de serviços e equipamentos. O imóvel está inserido em zona com infraestruturas executadas com acessos às principais vias de conexão a Lisboa a distarem no máximo 1,7km, aproximadamente. Zona infraestruturada com boa rede de transportes públicos nomeadamente rede municipal rodoviária e rede ferroviária – distando a estação de comboios de Santo Amaro a 1 Km de distância.',
     image: '/images/properties/img-oeiras.jpg',
     gallery: [
       '/images/properties/img-oeiras.jpg',
@@ -69,6 +71,7 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação',
     description: 'Moradia com acabamentos premium e design contemporâneo. Propriedade de luxo com vistas e localização privilegiada.',
+    locationDescription: 'O imóvel insere-se no núcleo central de Cascais, numa zona habitacional de densidade média baixa com imóveis unifamiliares de características e volumetria similares. A zona é servida por comércio tradicional de rua, mercado Municipal e a cerca de 150m grandes superfícies comerciais; na envolvente próxima poder-se-á encontrar escolas, centro de Saúde de cascais a 150m, clínicas, farmácia, hotel e entidades bancárias. Zona servida de excelente rede de transportes públicos, com transporte rodoviário e ferroviário numa distância a pé.',
     image: '/images/properties/cascais-1.jpg',
     gallery: [
       '/images/properties/cascais-1.jpg',
@@ -95,6 +98,7 @@ const projects = [
     region: 'algarve',
     type: 'Habitação e estacionamento',
     description: 'Oportunidade de investimento no coração do Algarve. Propriedade com excelentes perspectivas de rentabilidade.',
+    locationDescription: 'Situado no centro da cidade de Faro, principal artéria da cidade, em zona urbana consolidada, com bons acessos e ótimas áreas de circulação envolvente. Inserida numa zona composta por edifícios de habitação multifamiliar de cércea elevada, com comércio e/ou serviços ao nível do R/C e por vezes 1ºandar. Zona servida em pleno pela rede de transportes públicos municipais, regionais e nacionais. O imóvel está localizado junto das principais infraestruturas urbanas bem como de todos os serviços (tribunal; escolas; superfícies comerciais; cartórios, finanças, conservatórias e outras)',
     image: '/images/properties/QUARTO-STUDIO.jpg',
     gallery: [
       '/images/properties/QUARTO-STUDIO.jpg',
@@ -121,6 +125,7 @@ const projects = [
     region: 'algarve',
     type: 'Turismo em Espaço Rural',
     description: 'Projeto de turismo em espaço rural com potencial significativo. Localizado em zona de elevado valor paisagístico.',
+    locationDescription: 'O imóvel localiza-se na localidade de Patã de Cima, a 3 km de Boliqueime, numa zona considerada rural composta por moradias isoladas a norte da N125 – via confrontante. O imóvel encontra-se localizado a cerca de 10 km de Albufeira, com todo o comércio e serviços que a cidade turística tem para oferecer a menos de 10 km de Vilamoura, localidade igualmente turística, com praias e destinado e ocupado essencialmente por segunda habitação, com comércio direcionado para a atividade turística. A zona está servida de excelentes acessos, a cerca de 32 km do Aeroporto de Faro e a menos de 6 km do nó de acesso da A22',
     image: '/images/properties/VARANDA.jpg',
     gallery: [
       '/images/properties/VARANDA.jpg',
@@ -147,6 +152,7 @@ const projects = [
     region: 'algarve',
     type: 'Terreno Rústico',
     description: 'Investimento em terreno rústico com elevado potencial de valorização. Propriedade estrategicamente localizada no Algarve.',
+    locationDescription: 'Próximo do Centro e da Barragem do Arimbo, com pouco interesse comercial dado tratar-se de uma zona sem habitações e com terrenos com grandes desníveis de difícil acesso; pese embora tenha grande atratividade e potencial a nível turístico. Dista menos de 5 Km do Centro de S. Brás de Alportel; menos de 6km de Alportel; a cerca de 20km do aeroporto internacional de Faro e acerca de 10Km do nó de acesso à A22, acesso feito pela emblemática N2.',
     image: '/images/properties/2-Andar-sala.jpg',
     gallery: [
       '/images/properties/2-Andar-sala.jpg',
@@ -312,6 +318,14 @@ function ProjectModal({ project, onClose }: { project: any; onClose: () => void 
               </button>
             ))}
           </div>
+
+          {/* LOCALIZAÇÃO */}
+          {project.locationDescription && (
+            <div className="border-t pt-6 mt-6">
+              <h3 className="text-xl font-bold text-blue-900 mb-3">Localização e Enquadramento Urbano</h3>
+              <p className="text-gray-700 leading-relaxed text-sm">{project.locationDescription}</p>
+            </div>
+          )}
 
           {/* DETALHES DO PROJETO */}
           <div className="border-t pt-6 mt-6">
