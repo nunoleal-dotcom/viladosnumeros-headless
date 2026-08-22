@@ -23,7 +23,18 @@ const projects = [
       '/images/properties/campo-ourique-5.jpg',
       '/images/properties/campo-ourique-6.jpg',
       '/images/properties/campo-ourique-7.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '38.719052, -9.167897',
+      rendaPotencial: '5.975,00€/Mês',
+      valorMercado: '1.383.800,00€',
+      anoConstruction: '1928',
+      typeImovel: 'Prédio Urbano',
+      areaConstruction: '239 m²',
+      areaTerrain: '100 m²',
+      numberOfFloors: '4',
+      condition: 'Totalmente renovado'
+    }
   },
   {
     id: 2,
@@ -38,7 +49,18 @@ const projects = [
       '/images/properties/LOUNGE.jpg',
       '/images/properties/SALA-ESTAR.jpg',
       '/images/properties/SALA-JANTAR.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '38.694452, -9.311073',
+      rendaPotencial: '3.000€/Mês',
+      valorMercado: '309.700,00€',
+      anoConstruction: '2013',
+      typeImovel: 'Prédio urbano',
+      areaConstruction: '139 m²',
+      areaTerrain: '1.840 m²',
+      numberOfFloors: '3 acima + 2 abaixo',
+      condition: 'Muito bom'
+    }
   },
   {
     id: 3,
@@ -53,7 +75,18 @@ const projects = [
       '/images/properties/cascais-2.jpg',
       '/images/properties/cascais-3.jpg',
       '/images/properties/cascais-4.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '38°42\'10"N, 9°25\'12"W',
+      rendaPotencial: '20.000€/Mês',
+      valorMercado: '3.634.102,00€',
+      anoConstruction: '1962 (inicial) / 2023 (renovação)',
+      typeImovel: 'Prédio urbano',
+      areaConstruction: '680 m²',
+      areaTerrain: '1.460 m²',
+      numberOfFloors: '3 acima + 2 abaixo',
+      condition: 'Novo'
+    }
   },
   {
     id: 4,
@@ -68,7 +101,18 @@ const projects = [
       '/images/properties/LOUNGE.jpg',
       '/images/properties/SALA-ESTAR.jpg',
       '/images/properties/BNH.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '37.017838, -7.927055',
+      rendaPotencial: '1.350€/Mês',
+      valorMercado: '320.700,00€',
+      anoConstruction: '1995',
+      typeImovel: 'Fração autónoma T2 + estacionamento',
+      areaConstruction: '132 m²',
+      areaTerrain: '919,50 m²',
+      numberOfFloors: '2 pisos',
+      condition: 'Muito bom'
+    }
   },
   {
     id: 5,
@@ -84,7 +128,17 @@ const projects = [
       '/images/properties/SALA-ESTAR.jpg',
       '/images/properties/LOUNGE.jpg',
       '/images/properties/01_RUA-02.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '37°07\'21.8"N 8°10\'54.8"W',
+      valorMercado: '3.284.000,00€',
+      anoConstruction: '1951 (existente) / 2023 (em construção)',
+      typeImovel: 'Prédio misto',
+      areaConstruction: '1.022,3 m² (11 unidades alojamento)',
+      areaTerrain: '24.335,50 m²',
+      numberOfFloors: '1 + 1',
+      condition: 'Em renovação'
+    }
   },
   {
     id: 6,
@@ -101,7 +155,17 @@ const projects = [
       '/images/properties/Escadas-detalhe.jpg',
       '/images/properties/VARANDA.jpg',
       '/images/properties/LOUNGE.jpg'
-    ]
+    ],
+    details: {
+      coordinates: '37°7\'21.91"N, 8°10\'54.86"W',
+      valorMercado: '779.877€',
+      typeImovel: 'Terreno rústico',
+      areaConstruction: 'Sem construção',
+      areaTerrain: '1.896.478,00 m²',
+      potentialConstruction: 'Habitação (500m²) / Turismo (2000m²)',
+      numberOfFloors: 'Máx 2 (incluindo semienterrados)',
+      condition: 'Muito bom'
+    }
   },
 ];
 
@@ -249,9 +313,24 @@ function ProjectModal({ project, onClose }: { project: any; onClose: () => void 
             ))}
           </div>
 
+          {/* DETALHES DO PROJETO */}
+          <div className="border-t pt-6 mt-6">
+            <h3 className="text-xl font-bold text-blue-900 mb-4">Informações do Projeto</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {project.details && Object.entries(project.details).map(([key, value]) => (
+                <div key={key} className="bg-gray-50 p-3 rounded">
+                  <p className="text-xs text-gray-600 font-semibold uppercase">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </p>
+                  <p className="text-sm text-gray-800 font-medium">{value as string}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <button
             onClick={onClose}
-            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition"
+            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition mt-6"
           >
             Fechar
           </button>
