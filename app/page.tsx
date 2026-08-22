@@ -130,23 +130,56 @@ function ImageCarousel({ images }: { images: string[] }) {
 
 // Modal Component for Project Details
 function ProjectModal({ project, onClose }: { project: any; onClose: () => void }) {
+  const [modalImageIndex, setModalImageIndex] = useState(0);
+  const allImages = [project.image, ...project.gallery];
+
+  const goToPrevious = () => {
+    setModalImageIndex((prev) => (prev === 0 ? allImages.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setModalImageIndex((prev) => (prev === allImages.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl z-10"
+          className="sticky top-4 right-4 float-right text-gray-500 hover:text-gray-800 text-3xl z-20 bg-white rounded-full w-10 h-10 flex items-center justify-center"
         >
           ✕
         </button>
 
-        {/* Image */}
-        <img
-          src={project.image}
-          alt={project.name}
-          className="w-full h-80 object-cover"
-        />
+        {/* Large Image with Carousel */}
+        <div className="relative w-full bg-gray-300">
+          {/* Main Large Image */}
+          <img
+            src={allImages[modalImageIndex]}
+            alt={`${project.name} - ${modalImageIndex + 1}`}
+            className="w-full h-96 md:h-[500px] object-cover"
+          />
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition text-2xl"
+          >
+            ←
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition text-2xl"
+          >
+            →
+          </button>
+
+          {/* Counter */}
+          <div className="absolute top-4 right-4 bg-black/50 text-white px-4 py-2 rounded-lg font-bold">
+            {modalImageIndex + 1}/{allImages.length}
+          </div>
+        </div>
 
         {/* Content */}
         <div className="p-8">
@@ -158,16 +191,25 @@ function ProjectModal({ project, onClose }: { project: any; onClose: () => void 
             {project.description}
           </p>
 
-          {/* Gallery */}
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">Galeria de Imagens</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {project.gallery.map((img: string, idx: number) => (
-              <img
+          {/* Thumbnail Gallery */}
+          <h3 className="text-2xl font-bold text-blue-900 mb-4">Todas as Imagens</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            {allImages.map((img: string, idx: number) => (
+              <button
                 key={idx}
-                src={img}
-                alt={`${project.name} - ${idx + 1}`}
-                className="w-full h-48 object-cover rounded-lg"
-              />
+                onClick={() => setModalImageIndex(idx)}
+                className={`rounded-lg overflow-hidden border-2 transition ${
+                  idx === modalImageIndex
+                    ? 'border-blue-900'
+                    : 'border-gray-300 hover:border-blue-600'
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`Thumb ${idx + 1}`}
+                  className="w-full h-24 object-cover"
+                />
+              </button>
             ))}
           </div>
 
