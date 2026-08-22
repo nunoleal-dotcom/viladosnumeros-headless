@@ -240,8 +240,10 @@ export default async function Home() {
     <div className="min-h-screen bg-white">
       {/* HEADER */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur bg-white/95">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-900">Vila dos Números</h1>
+        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+          <a href="#" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Vila dos Números" className="h-12 w-auto" />
+          </a>
           <nav className="flex gap-12">
             <a href="#sobre" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">SOBRE</a>
             <a href="#projetos" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">PROJETOS</a>
