@@ -38,7 +38,7 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação de Qualidade',
     description: 'Projeto de reabilitação em pleno coração de Lisboa',
-    image: 'https://images.unsplash.com/photo-1578683078519-67c36ca11d4f?w=800&h=600&fit=crop'
+    image: '/images/properties/01_RUA-01.jpg'
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projects = [
     region: 'lisboa',
     type: 'Serviços Comerciais',
     description: 'Espaço comercial moderno na Área de Lisboa',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop'
+    image: '/images/properties/2-Andar-sala.jpg'
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação Premium',
     description: 'Propriedade de luxo com vista para o mar',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop'
+    image: '/images/properties/Escadas-detalhe.jpg'
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ const projects = [
     region: 'algarve',
     type: 'Investimento Imobiliário',
     description: 'Oportunidade no coração do Algarve',
-    image: 'https://images.unsplash.com/photo-1560806674-9a308ad5aaa0?w=800&h=600&fit=crop'
+    image: '/images/properties/quarto-2.jpg'
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ const projects = [
     region: 'algarve',
     type: 'Desenvolvimento Rural',
     description: 'Projeto de desenvolvimento sustentável',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25442c?w=800&h=600&fit=crop'
+    image: '/images/properties/sala.jpg'
   },
   {
     id: 6,
@@ -83,7 +83,7 @@ const projects = [
     region: 'algarve',
     type: 'Habitação Residencial',
     description: 'Complexo residencial em zona privilegiada',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop'
+    image: '/images/properties/sanita-torneira.jpg'
   },
 ];
 
