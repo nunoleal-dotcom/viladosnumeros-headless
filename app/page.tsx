@@ -16,6 +16,7 @@ const projects = [
     description: 'Propriedade Total, composto por R/C, 1º andar, 2º andar e águas-furtadas. 239 m² de área de construção. Totalmente renovado.',
     locationDescription: 'Prédio urbano, inserido numa zona estabilizada e residencial de 1ª habitação onde ocorrem outros tipos de ocupação compatíveis com habitação servida de todo o tipo de equipamentos, serviços e comércio local bem como alojamento local (turismo)',
     image: '/images/properties/campo-ourique-1.jpg',
+    video: '/videos/capa12.mp4',
     gallery: [
       '/images/properties/campo-ourique-1.jpg',
       '/images/properties/campo-ourique-2.jpg',
@@ -74,6 +75,7 @@ const projects = [
     description: 'Moradia com acabamentos premium e design contemporâneo. Propriedade de luxo com vistas e localização privilegiada.',
     locationDescription: 'O imóvel insere-se no núcleo central de Cascais, numa zona habitacional de densidade média baixa com imóveis unifamiliares de características e volumetria similares. A zona é servida por comércio tradicional de rua, mercado Municipal e a cerca de 150m grandes superfícies comerciais; na envolvente próxima poder-se-á encontrar escolas, centro de Saúde de cascais a 150m, clínicas, farmácia, hotel e entidades bancárias. Zona servida de excelente rede de transportes públicos, com transporte rodoviário e ferroviário numa distância a pé.',
     image: '/images/properties/cascais-1.jpg',
+    video: '/videos/cascais.mp4',
     gallery: [
       '/images/properties/cascais-1.jpg',
       '/images/properties/cascais-2.jpg',
