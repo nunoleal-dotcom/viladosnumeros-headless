@@ -128,9 +128,65 @@ function ImageCarousel({ images }: { images: string[] }) {
   );
 }
 
+// Modal Component for Project Details
+function ProjectModal({ project, onClose }: { project: any; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl z-10"
+        >
+          ✕
+        </button>
+
+        {/* Image */}
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-80 object-cover"
+        />
+
+        {/* Content */}
+        <div className="p-8">
+          <h2 className="text-4xl font-bold text-blue-900 mb-2">{project.name}</h2>
+          <p className="text-blue-600 font-semibold text-lg mb-4">{project.type}</p>
+          <p className="text-gray-500 text-lg mb-6">📍 {project.location}</p>
+
+          <p className="text-gray-700 text-lg leading-relaxed mb-8">
+            {project.description}
+          </p>
+
+          {/* Gallery */}
+          <h3 className="text-2xl font-bold text-blue-900 mb-4">Galeria de Imagens</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            {project.gallery.map((img: string, idx: number) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${project.name} - ${idx + 1}`}
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={onClose}
+            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Client component for interactive projects section
 function ProjectsSection({ projects }: { projects: any[] }) {
   const [selectedRegion, setSelectedRegion] = useState('all');
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 
   const filteredProjects = selectedRegion === 'all'
     ? projects
@@ -193,7 +249,10 @@ function ProjectsSection({ projects }: { projects: any[] }) {
                 </div>
                 <p className="text-blue-600 font-semibold text-xs mb-3 uppercase tracking-wider">{project.type}</p>
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">{project.description}</p>
-                <button className="text-blue-900 hover:text-blue-600 font-bold text-sm transition">
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="text-blue-900 hover:text-blue-600 font-bold text-sm transition"
+                >
                   Ver Detalhes →
                 </button>
               </div>
@@ -207,6 +266,11 @@ function ProjectsSection({ projects }: { projects: any[] }) {
           </div>
         )}
       </div>
+
+      {/* Modal */}
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   );
 }
