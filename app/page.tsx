@@ -26,14 +26,62 @@ async function getPosts() {
   }
 }
 
-// Project data with regions
+// Project data with regions and images
 const projects = [
-  { id: 1, name: 'Campo de Ourique', location: 'Lisboa', region: 'lisboa', type: 'Habitação de Qualidade', description: 'Projeto de reabilitação em pleno coração de Lisboa' },
-  { id: 2, name: 'Oeiras', location: 'Oeiras', region: 'lisboa', type: 'Serviços Comerciais', description: 'Espaço comercial moderno na Área de Lisboa' },
-  { id: 3, name: 'Cascais', location: 'Cascais', region: 'lisboa', type: 'Habitação Premium', description: 'Propriedade de luxo com vista para o mar' },
-  { id: 4, name: 'Faro', location: 'Faro', region: 'algarve', type: 'Investimento Imobiliário', description: 'Oportunidade no coração do Algarve' },
-  { id: 5, name: 'São Brás de Alportel', location: 'Algarve', region: 'algarve', type: 'Desenvolvimento Rural', description: 'Projeto de desenvolvimento sustentável' },
-  { id: 6, name: 'Boliqueime', location: 'Algarve', region: 'algarve', type: 'Habitação Residencial', description: 'Complexo residencial em zona privilegiada' },
+  {
+    id: 1,
+    name: 'Campo de Ourique',
+    location: 'Lisboa',
+    region: 'lisboa',
+    type: 'Habitação de Qualidade',
+    description: 'Projeto de reabilitação em pleno coração de Lisboa',
+    image: 'https://images.unsplash.com/photo-1578683078519-67c36ca11d4f?w=800&h=600&fit=crop'
+  },
+  {
+    id: 2,
+    name: 'Oeiras',
+    location: 'Oeiras',
+    region: 'lisboa',
+    type: 'Serviços Comerciais',
+    description: 'Espaço comercial moderno na Área de Lisboa',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop'
+  },
+  {
+    id: 3,
+    name: 'Cascais',
+    location: 'Cascais',
+    region: 'lisboa',
+    type: 'Habitação Premium',
+    description: 'Propriedade de luxo com vista para o mar',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop'
+  },
+  {
+    id: 4,
+    name: 'Faro',
+    location: 'Faro',
+    region: 'algarve',
+    type: 'Investimento Imobiliário',
+    description: 'Oportunidade no coração do Algarve',
+    image: 'https://images.unsplash.com/photo-1560806674-9a308ad5aaa0?w=800&h=600&fit=crop'
+  },
+  {
+    id: 5,
+    name: 'São Brás de Alportel',
+    location: 'Algarve',
+    region: 'algarve',
+    type: 'Desenvolvimento Rural',
+    description: 'Projeto de desenvolvimento sustentável',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25442c?w=800&h=600&fit=crop'
+  },
+  {
+    id: 6,
+    name: 'Boliqueime',
+    location: 'Algarve',
+    region: 'algarve',
+    type: 'Habitação Residencial',
+    description: 'Complexo residencial em zona privilegiada',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop'
+  },
 ];
 
 export default async function Home() {
@@ -112,23 +160,37 @@ export default async function Home() {
             </button>
           </div>
 
-          {/* GRID DE PROJETOS - GRANDE E PROFISSIONAL */}
+          {/* GRID DE PROJETOS - COM IMAGENS */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div key={project.id} className="group cursor-pointer">
-                <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg overflow-hidden h-64 flex items-center justify-center shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                  <div className="text-center text-white p-6">
-                    <p className="text-5xl font-bold mb-2">{project.name.charAt(0)}</p>
-                    <p className="text-2xl font-bold">{project.name}</p>
+                {/* Imagem do Projeto */}
+                <div className="relative overflow-hidden rounded-lg h-64 shadow-lg hover:shadow-2xl transition mb-4">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                  {/* Overlay com informações */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-6">
+                    <div className="text-white">
+                      <p className="text-sm font-semibold text-blue-300 mb-1">{project.type}</p>
+                      <p className="text-lg font-bold">{project.name}</p>
+                    </div>
                   </div>
                 </div>
+
+                {/* Informações do Card */}
                 <div className="mt-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-xl font-bold text-blue-900">{project.name}</h4>
-                    <span className="text-sm text-gray-500">📍 {project.location}</span>
+                  <div className="flex items-start justify-between mb-2">
+                    <h4 className="text-lg font-bold text-blue-900 flex-1">{project.name}</h4>
+                    <span className="text-sm text-gray-500 whitespace-nowrap ml-2">📍 {project.location}</span>
                   </div>
-                  <p className="text-gray-700 font-semibold text-sm mb-2">{project.type}</p>
-                  <p className="text-gray-600 text-sm">{project.description}</p>
+                  <p className="text-blue-600 font-semibold text-xs mb-2 uppercase tracking-wide">{project.type}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
+                  <button className="mt-4 text-blue-900 hover:text-blue-600 font-bold text-sm transition">
+                    Ver Detalhes →
+                  </button>
                 </div>
               </div>
             ))}
