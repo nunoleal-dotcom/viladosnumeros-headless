@@ -455,34 +455,28 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* HEADER */}
-      <header className="bg-gradient-to-r from-teal-900 to-teal-700 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <header className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           {/* Logo Section */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-white rounded-lg p-2 group-hover:shadow-lg transition">
-              <div className="text-teal-900 font-bold text-xl tracking-tight">VDN</div>
-            </div>
-            <div className="text-white hidden sm:block">
-              <div className="font-bold text-lg leading-tight">Vila dos Números</div>
-              <div className="text-xs text-teal-100">Investimento Imobiliário SIGI</div>
-            </div>
+          <a href="#" className="flex items-center gap-3 hover:opacity-80 transition">
+            <img src="/logo.png" alt="Vila dos Números" className="h-16 w-auto" />
           </a>
 
           {/* Navigation */}
           <nav className="flex gap-8 items-center">
-            <a href="#sobre" className="text-white hover:text-teal-100 transition text-sm font-semibold uppercase tracking-wide">SOBRE</a>
-            <a href="#projetos" className="text-white hover:text-teal-100 transition text-sm font-semibold uppercase tracking-wide">PROJETOS</a>
-            <a href="#equipa" className="text-white hover:text-teal-100 transition text-sm font-semibold uppercase tracking-wide">EQUIPA</a>
-            <a href="/investors" className="text-white hover:text-teal-100 transition text-sm font-semibold uppercase tracking-wide">INVESTIDORES</a>
-            <a href="#contacto" className="text-white hover:text-teal-100 transition text-sm font-semibold uppercase tracking-wide">CONTACTO</a>
+            <a href="#sobre" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">SOBRE</a>
+            <a href="#projetos" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">PROJETOS</a>
+            <a href="#equipa" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">EQUIPA</a>
+            <a href="/investors" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">INVESTIDORES</a>
+            <a href="#contacto" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">CONTACTO</a>
 
             {/* Language Selector */}
-            <div className="flex gap-3 ml-4 pl-4 border-l border-teal-700">
-              <a href="#" className="text-white font-bold text-xs hover:text-teal-100 transition">PT</a>
-              <span className="text-teal-600">|</span>
-              <a href="#" className="text-teal-100 text-xs hover:text-white transition">EN</a>
-              <span className="text-teal-600">|</span>
-              <a href="#" className="text-teal-100 text-xs hover:text-white transition">FR</a>
+            <div className="flex gap-3 ml-4 pl-4 border-l border-gray-200">
+              <a href="#" className="text-gray-800 font-bold text-xs hover:text-gray-600 transition">PT</a>
+              <span className="text-gray-400">|</span>
+              <a href="#" className="text-gray-600 text-xs hover:text-gray-800 transition">EN</a>
+              <span className="text-gray-400">|</span>
+              <a href="#" className="text-gray-600 text-xs hover:text-gray-800 transition">FR</a>
             </div>
           </nav>
         </div>

@@ -6,33 +6,35 @@ export default function InvestorsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* HEADER */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-blue-900">
-            Vila dos Números
+      <header className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
+            <img src="/logo.png" alt="Vila dos Números" className="h-16 w-auto" />
           </Link>
-          <nav className="flex gap-12 items-center">
-            <a href="/#sobre" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
+          <nav className="flex gap-8 items-center">
+            <a href="/#sobre" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
               SOBRE
             </a>
-            <a href="/#projetos" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
+            <a href="/#projetos" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
               PROJETOS
             </a>
-            <a href="/#equipa" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
+            <a href="/#equipa" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
               EQUIPA
             </a>
-            <a href="/investors" className="text-blue-900 transition text-sm font-medium border-b-2 border-blue-900">
+            <a href="/investors" className="text-gray-900 transition text-sm font-semibold uppercase tracking-wide border-b-2 border-gray-900">
               INVESTIDORES
             </a>
-            <a href="/#contacto" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
+            <a href="/#contacto" className="text-gray-700 hover:text-gray-900 transition text-sm font-semibold uppercase tracking-wide">
               CONTACTO
             </a>
 
             {/* Language Selector */}
-            <div className="flex gap-2 ml-4 pl-4 border-l border-gray-200">
-              <a href="#" className="text-gray-700 hover:text-blue-900 transition text-xs font-semibold">PT</a>
-              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">EN</a>
-              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">FR</a>
+            <div className="flex gap-3 ml-4 pl-4 border-l border-gray-200">
+              <a href="#" className="text-gray-800 font-bold text-xs hover:text-gray-600 transition">PT</a>
+              <span className="text-gray-400">|</span>
+              <a href="#" className="text-gray-600 text-xs hover:text-gray-800 transition">EN</a>
+              <span className="text-gray-400">|</span>
+              <a href="#" className="text-gray-600 text-xs hover:text-gray-800 transition">FR</a>
             </div>
           </nav>
         </div>
