@@ -96,6 +96,7 @@ const projects = [
 // Image Carousel Component
 function ImageCarousel({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageError, setImageError] = useState(false);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -106,12 +107,14 @@ function ImageCarousel({ images }: { images: string[] }) {
   };
 
   return (
-    <div className="relative w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden group">
+    <div className="relative w-full h-64 md:h-80 bg-gray-300 rounded-lg overflow-hidden group">
       {/* Main Image */}
       <img
         src={images[currentIndex]}
         alt={`Gallery image ${currentIndex + 1}`}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        onError={() => setImageError(true)}
+        onLoad={() => setImageError(false)}
       />
 
       {/* Navigation Arrows */}
