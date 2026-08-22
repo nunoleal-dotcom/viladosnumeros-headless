@@ -85,17 +85,17 @@ export default function InvestorsPage() {
       </header>
 
       {/* HERO */}
-      <section className="relative h-96 overflow-hidden">
+      <section className="relative h-48 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=500&fit=crop"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=300&fit=crop"
           alt="Portfólio de Projetos"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute inset-0 flex flex-col justify-center">
           <div className="max-w-7xl mx-auto px-6 w-full">
-            <h2 className="text-5xl font-bold text-white mb-4">Acionistas e Investidores</h2>
-            <p className="text-xl text-gray-100">
+            <h2 className="text-3xl font-bold text-white mb-2">Acionistas e Investidores</h2>
+            <p className="text-sm text-gray-100">
               Informação corporativa, documentação legal e relatórios financeiros
             </p>
           </div>
