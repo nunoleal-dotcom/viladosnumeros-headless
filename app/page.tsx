@@ -12,60 +12,73 @@ const projects = [
     name: 'Campo de Ourique',
     location: 'Lisboa',
     region: 'lisboa',
-    type: 'Habitação de Qualidade',
-    description: 'Projeto de reabilitação em pleno coração de Lisboa',
-    image: '/images/properties/img-ourique.jpg',
-    gallery: ['/images/properties/01_RUA-01.jpg', '/images/properties/01_RUA-02.jpg', '/images/properties/SALA-ESTAR.jpg']
+    type: 'Habitação',
+    description: 'Propriedade Total, composto por R/C, 1º andar, 2º andar e águas-furtadas. 239 m² de área de construção. Totalmente renovado.',
+    image: '/images/properties/campo-ourique-1.jpg',
+    gallery: [
+      '/images/properties/campo-ourique-1.jpg',
+      '/images/properties/campo-ourique-2.jpg',
+      '/images/properties/campo-ourique-3.jpg',
+      '/images/properties/campo-ourique-4.jpg',
+      '/images/properties/campo-ourique-5.jpg',
+      '/images/properties/campo-ourique-6.jpg',
+      '/images/properties/campo-ourique-7.jpg'
+    ]
   },
   {
     id: 2,
     name: 'Oeiras',
     location: 'Oeiras',
     region: 'lisboa',
-    type: 'Serviços Comerciais',
-    description: 'Espaço comercial moderno na Área de Lisboa',
+    type: 'Serviços',
+    description: 'Fração autónoma destinada a serviços, composta por open space, zona de copa, duas instalações sanitárias e varanda. 139 m² de área útil.',
     image: '/images/properties/img-oeiras.jpg',
-    gallery: ['/images/properties/LOUNGE.jpg', '/images/properties/SALA-JANTAR.jpg', '/images/properties/VARANDA.jpg']
+    gallery: ['/images/properties/img-oeiras.jpg']
   },
   {
     id: 3,
     name: 'Cascais',
     location: 'Cascais',
     region: 'lisboa',
-    type: 'Habitação Premium',
-    description: 'Propriedade de luxo com vista para o mar',
-    image: '/images/properties/moradia-cascais-total.jpg',
-    gallery: ['/images/properties/Escadas-detalhe.jpg', '/images/properties/2-Andar-sala.jpg', '/images/properties/BNH.jpg']
+    type: 'Habitação',
+    description: 'Moradia com acabamentos premium e design contemporâneo. Propriedade de luxo com vistas e localização privilegiada.',
+    image: '/images/properties/cascais-1.jpg',
+    gallery: [
+      '/images/properties/cascais-1.jpg',
+      '/images/properties/cascais-2.jpg',
+      '/images/properties/cascais-3.jpg',
+      '/images/properties/cascais-4.jpg'
+    ]
   },
   {
     id: 4,
     name: 'Faro',
     location: 'Faro',
     region: 'algarve',
-    type: 'Investimento Imobiliário',
-    description: 'Oportunidade no coração do Algarve',
+    type: 'Habitação e estacionamento',
+    description: 'Oportunidade de investimento no coração do Algarve. Propriedade com excelentes perspectivas de rentabilidade.',
     image: '/images/properties/QUARTO-STUDIO.jpg',
-    gallery: ['/images/properties/LOUNGE.jpg', '/images/properties/SALA-ESTAR.jpg', '/images/properties/BNH.jpg']
+    gallery: ['/images/properties/QUARTO-STUDIO.jpg']
   },
   {
     id: 5,
-    name: 'São Brás de Alportel',
+    name: 'Boliqueime - Patã de Cima',
     location: 'Algarve',
     region: 'algarve',
-    type: 'Desenvolvimento Rural',
-    description: 'Projeto de desenvolvimento sustentável',
-    image: '/images/properties/sala.jpg',
-    gallery: ['/images/properties/SALA-JANTAR.jpg', '/images/properties/VARANDA.jpg', '/images/properties/QUARTO-STUDIO.jpg']
+    type: 'Turismo em Espaço Rural',
+    description: 'Projeto de turismo em espaço rural com potencial significativo. Localizado em zona de elevado valor paisagístico.',
+    image: '/images/properties/VARANDA.jpg',
+    gallery: ['/images/properties/VARANDA.jpg']
   },
   {
     id: 6,
-    name: 'Boliqueime',
+    name: 'São Brás de Alportel - Pedro de Amigos',
     location: 'Algarve',
     region: 'algarve',
-    type: 'Habitação Residencial',
-    description: 'Complexo residencial em zona privilegiada',
-    image: '/images/properties/sanita-torneira.jpg',
-    gallery: ['/images/properties/quarto-2.jpg', '/images/properties/BNH.jpg', '/images/properties/Escadas-detalhe.jpg']
+    type: 'Terreno Rústico',
+    description: 'Investimento em terreno rústico com elevado potencial de valorização. Propriedade estrategicamente localizada no Algarve.',
+    image: '/images/properties/sala.jpg',
+    gallery: ['/images/properties/sala.jpg']
   },
 ];
 
