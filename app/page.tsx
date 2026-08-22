@@ -16,6 +16,7 @@ const projects = [
     description: 'Propriedade Total, composto por R/C, 1º andar, 2º andar e águas-furtadas. 239 m² de área de construção. Totalmente renovado.',
     locationDescription: 'Prédio urbano, inserido numa zona estabilizada e residencial de 1ª habitação onde ocorrem outros tipos de ocupação compatíveis com habitação servida de todo o tipo de equipamentos, serviços e comércio local bem como alojamento local (turismo)',
     image: '/images/properties/campo-ourique-1.jpg',
+    video: '/videos/campo-ourique.mp4',
     gallery: [
       '/images/properties/campo-ourique-1.jpg',
       '/images/properties/campo-ourique-2.jpg',
@@ -74,6 +75,7 @@ const projects = [
     description: 'Moradia com acabamentos premium e design contemporâneo. Propriedade de luxo com vistas e localização privilegiada.',
     locationDescription: 'O imóvel insere-se no núcleo central de Cascais, numa zona habitacional de densidade média baixa com imóveis unifamiliares de características e volumetria similares. A zona é servida por comércio tradicional de rua, mercado Municipal e a cerca de 150m grandes superfícies comerciais; na envolvente próxima poder-se-á encontrar escolas, centro de Saúde de cascais a 150m, clínicas, farmácia, hotel e entidades bancárias. Zona servida de excelente rede de transportes públicos, com transporte rodoviário e ferroviário numa distância a pé.',
     image: '/images/properties/cascais-1.jpg',
+    video: '/videos/cascais1.mp4',
     gallery: [
       '/images/properties/cascais-1.jpg',
       '/images/properties/cascais-2.jpg',
@@ -192,16 +194,30 @@ function ImageCarousel({ images }: { images: string[] }) {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
+  const currentItem = images[currentIndex];
+  const isVideo = currentItem?.endsWith('.mp4') || currentItem?.endsWith('.webm');
+
   return (
     <div className="relative w-full h-64 md:h-80 bg-gray-300 rounded-lg overflow-hidden group">
-      {/* Main Image */}
-      <img
-        src={images[currentIndex]}
-        alt={`Gallery image ${currentIndex + 1}`}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        onError={() => setImageError(true)}
-        onLoad={() => setImageError(false)}
-      />
+      {/* Main Image or Video */}
+      {isVideo ? (
+        <video
+          src={currentItem}
+          className="w-full h-full object-cover"
+          controls
+          autoPlay
+          muted
+          playsInline
+        />
+      ) : (
+        <img
+          src={currentItem}
+          alt={`Gallery item ${currentIndex + 1}`}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={() => setImageError(true)}
+          onLoad={() => setImageError(false)}
+        />
+      )}
 
       {/* Navigation Arrows */}
       <button
@@ -413,8 +429,8 @@ function ProjectsSection({ projects }: { projects: any[] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
-              {/* Carrossel de Imagens */}
-              <ImageCarousel images={[project.image, ...project.gallery]} />
+              {/* Carrossel de Imagens e Vídeos */}
+              <ImageCarousel images={project.video ? [project.video, project.image, ...project.gallery] : [project.image, ...project.gallery]} />
 
               {/* Informações do Card */}
               <div className="mt-6 bg-white rounded-lg p-6 border border-gray-100 hover:border-blue-900 transition">
