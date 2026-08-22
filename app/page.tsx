@@ -536,8 +536,12 @@ export default function Home() {
 
           {/* MEMBRO 1 */}
           <div className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl h-96 flex items-center justify-center text-white text-9xl overflow-hidden shadow-xl">
-              👩‍💼
+            <div className="rounded-xl h-96 overflow-hidden shadow-xl">
+              <img
+                src="/images/team-member-1.jpg"
+                alt="Cláudia Daniela Constance Leal"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="pt-4">
               <h3 className="text-4xl font-bold text-blue-900 mb-4">Cláudia Daniela Constance Leal</h3>
@@ -572,8 +576,12 @@ export default function Home() {
                 Formada em Geografia pela Universidade de Lisboa. Mestre em Gestão de Projetos pelo ISCTE com especialização em investimento imobiliário.
               </p>
             </div>
-            <div className="order-1 md:order-2 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl h-96 flex items-center justify-center text-white text-9xl overflow-hidden shadow-xl">
-              👩‍💻
+            <div className="order-1 md:order-2 rounded-xl h-96 overflow-hidden shadow-xl">
+              <img
+                src="/images/team-member-2.jpg"
+                alt="Ana Lúcia Jardim Leal"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
