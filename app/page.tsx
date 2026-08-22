@@ -33,7 +33,12 @@ const projects = [
     type: 'Serviços',
     description: 'Fração autónoma destinada a serviços, composta por open space, zona de copa, duas instalações sanitárias e varanda. 139 m² de área útil.',
     image: '/images/properties/img-oeiras.jpg',
-    gallery: ['/images/properties/img-oeiras.jpg']
+    gallery: [
+      '/images/properties/img-oeiras.jpg',
+      '/images/properties/LOUNGE.jpg',
+      '/images/properties/SALA-ESTAR.jpg',
+      '/images/properties/SALA-JANTAR.jpg'
+    ]
   },
   {
     id: 3,
@@ -58,7 +63,12 @@ const projects = [
     type: 'Habitação e estacionamento',
     description: 'Oportunidade de investimento no coração do Algarve. Propriedade com excelentes perspectivas de rentabilidade.',
     image: '/images/properties/QUARTO-STUDIO.jpg',
-    gallery: ['/images/properties/QUARTO-STUDIO.jpg']
+    gallery: [
+      '/images/properties/QUARTO-STUDIO.jpg',
+      '/images/properties/LOUNGE.jpg',
+      '/images/properties/SALA-ESTAR.jpg',
+      '/images/properties/BNH.jpg'
+    ]
   },
   {
     id: 5,
@@ -68,7 +78,13 @@ const projects = [
     type: 'Turismo em Espaço Rural',
     description: 'Projeto de turismo em espaço rural com potencial significativo. Localizado em zona de elevado valor paisagístico.',
     image: '/images/properties/VARANDA.jpg',
-    gallery: ['/images/properties/VARANDA.jpg']
+    gallery: [
+      '/images/properties/VARANDA.jpg',
+      '/images/properties/SALA-JANTAR.jpg',
+      '/images/properties/SALA-ESTAR.jpg',
+      '/images/properties/LOUNGE.jpg',
+      '/images/properties/01_RUA-02.jpg'
+    ]
   },
   {
     id: 6,
@@ -77,8 +93,15 @@ const projects = [
     region: 'algarve',
     type: 'Terreno Rústico',
     description: 'Investimento em terreno rústico com elevado potencial de valorização. Propriedade estrategicamente localizada no Algarve.',
-    image: '/images/properties/sala.jpg',
-    gallery: ['/images/properties/sala.jpg']
+    image: '/images/properties/2-Andar-sala.jpg',
+    gallery: [
+      '/images/properties/2-Andar-sala.jpg',
+      '/images/properties/SALA-ESTAR.jpg',
+      '/images/properties/BNH.jpg',
+      '/images/properties/Escadas-detalhe.jpg',
+      '/images/properties/VARANDA.jpg',
+      '/images/properties/LOUNGE.jpg'
+    ]
   },
 ];
 
