@@ -352,7 +352,7 @@ function ProjectModal({ project, onClose }: { project: any; onClose: () => void 
             <h3 className="text-xl font-bold text-blue-900 mb-4">Informações do Projeto</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.details && Object.entries(project.details).map(([key, value]) => (
-                <div key={key} className="bg-gray-50 p-3 rounded">
+                <div key={key} className="bg-white border border-gray-200 p-3 rounded">
                   <p className="text-xs text-gray-600 font-semibold uppercase">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </p>
@@ -621,7 +621,7 @@ export default function Home() {
       <ProjectsSection projects={projects} />
 
       {/* EQUIPA */}
-      <section id="equipa" className="py-24 bg-gray-50">
+      <section id="equipa" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-5xl font-bold mb-20 text-blue-900 text-center">Administração</h2>
 
