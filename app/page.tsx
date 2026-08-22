@@ -456,12 +456,19 @@ export default function Home() {
           <a href="#" className="flex items-center gap-3">
             <img src="/logo.png" alt="Vila dos Números" className="h-12 w-auto" />
           </a>
-          <nav className="flex gap-12">
+          <nav className="flex gap-12 items-center">
             <a href="#sobre" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">SOBRE</a>
             <a href="#projetos" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">PROJETOS</a>
             <a href="#equipa" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">EQUIPA</a>
             <a href="/investors" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">INVESTIDORES</a>
             <a href="#contacto" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">CONTACTO</a>
+
+            {/* Language Selector */}
+            <div className="flex gap-2 ml-4 pl-4 border-l border-gray-200">
+              <a href="#" className="text-gray-700 hover:text-blue-900 transition text-xs font-semibold">PT</a>
+              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">EN</a>
+              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">FR</a>
+            </div>
           </nav>
         </div>
       </header>

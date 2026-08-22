@@ -11,7 +11,7 @@ export default function InvestorsPage() {
           <Link href="/" className="text-2xl font-bold text-blue-900">
             Vila dos Números
           </Link>
-          <nav className="flex gap-12">
+          <nav className="flex gap-12 items-center">
             <a href="/#sobre" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
               SOBRE
             </a>
@@ -27,6 +27,13 @@ export default function InvestorsPage() {
             <a href="/#contacto" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
               CONTACTO
             </a>
+
+            {/* Language Selector */}
+            <div className="flex gap-2 ml-4 pl-4 border-l border-gray-200">
+              <a href="#" className="text-gray-700 hover:text-blue-900 transition text-xs font-semibold">PT</a>
+              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">EN</a>
+              <a href="#" className="text-gray-400 hover:text-blue-900 transition text-xs font-medium">FR</a>
+            </div>
           </nav>
         </div>
       </header>
