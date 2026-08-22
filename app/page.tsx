@@ -182,42 +182,28 @@ const projects = [
 ];
 
 // Image Carousel Component
-function ImageCarousel({ items }: { items: string[] }) {
+function ImageCarousel({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageError, setImageError] = useState(false);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
-
-  const currentItem = items[currentIndex];
-  const isVideo = currentItem?.endsWith('.mp4') || currentItem?.endsWith('.webm');
 
   return (
     <div className="relative w-full h-64 md:h-80 bg-gray-300 rounded-lg overflow-hidden group">
-      {/* Video or Image */}
-      {isVideo ? (
-        <video
-          src={currentItem}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          controls
-          autoPlay
-          muted
-          playsInline
-        />
-      ) : (
-        <img
-          src={currentItem}
-          alt={`Gallery item ${currentIndex + 1}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          onError={() => setImageError(true)}
-          onLoad={() => setImageError(false)}
-        />
-      )}
+      {/* Main Image */}
+      <img
+        src={images[currentIndex]}
+        alt={`Gallery image ${currentIndex + 1}`}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        onError={() => setImageError(true)}
+        onLoad={() => setImageError(false)}
+      />
 
       {/* Navigation Arrows */}
       <button
@@ -235,7 +221,7 @@ function ImageCarousel({ items }: { items: string[] }) {
 
       {/* Indicators */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-        {items.map((_, index) => (
+        {images.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
@@ -248,7 +234,7 @@ function ImageCarousel({ items }: { items: string[] }) {
 
       {/* Counter */}
       <div className="absolute top-3 right-3 bg-black/50 text-white px-3 py-1 rounded text-sm font-semibold">
-        {currentIndex + 1}/{items.length}
+        {currentIndex + 1}/{images.length}
       </div>
     </div>
   );
@@ -429,8 +415,8 @@ function ProjectsSection({ projects }: { projects: any[] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
-              {/* Carrossel de Imagens e Vídeos */}
-              <ImageCarousel items={project.video ? [project.video, project.image, ...project.gallery] : [project.image, ...project.gallery]} />
+              {/* Carrossel de Imagens */}
+              <ImageCarousel images={[project.image, ...project.gallery]} />
 
               {/* Informações do Card */}
               <div className="mt-6 bg-white rounded-lg p-6 border border-gray-100 hover:border-blue-900 transition">
