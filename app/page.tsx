@@ -524,26 +524,50 @@ export default function Home() {
       <ProjectsSection projects={projects} />
 
       {/* EQUIPA */}
-      <section id="equipa" className="py-24 bg-gray-50">
+      <section id="equipa" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-16 text-blue-900">Nossa Equipa</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="group">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl h-96 flex items-center justify-center text-white text-7xl overflow-hidden shadow-lg group-hover:shadow-2xl transition mb-6">
-                👩‍💼
-              </div>
-              <h4 className="text-2xl font-bold text-blue-900 mb-2">Cláudia Daniela Constance Leal</h4>
-              <p className="text-blue-600 font-semibold mb-3">Presidente do Conselho de Administração</p>
-              <p className="text-gray-700 leading-relaxed">Antiga jornalista e apresentadora de televisão da RTP Africa com vasta experiência em media e gestão de negócios.</p>
-            </div>
+          <h2 className="text-5xl font-bold mb-20 text-blue-900 text-center">Nossa Equipa</h2>
 
-            <div className="group">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl h-96 flex items-center justify-center text-white text-7xl overflow-hidden shadow-lg group-hover:shadow-2xl transition mb-6">
-                👩‍💻
-              </div>
-              <h4 className="text-2xl font-bold text-blue-900 mb-2">Ana Lúcia Jardim Leal</h4>
-              <p className="text-blue-600 font-semibold mb-3">Membro do Conselho</p>
-              <p className="text-gray-700 leading-relaxed">CEO da EDINOK, Mestre em Gestão de Projetos pela ISCTE com especialização em investimento imobiliário.</p>
+          {/* MEMBRO 1 */}
+          <div className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl h-96 flex items-center justify-center text-white text-9xl overflow-hidden shadow-xl">
+              👩‍💼
+            </div>
+            <div className="pt-4">
+              <h3 className="text-4xl font-bold text-blue-900 mb-4">Cláudia Daniela Constance Leal</h3>
+              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">Presidente do Conselho de Administração</div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Administradora na Sociedade Vila dos Números SIGI, S.A. com responsabilidade em Direção Geral de Investimentos e Gestão de Património, Direção Geral de Recursos Humanos e Direção de Comunicação e Marketing.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Desempenha atualmente funções como correspondente da Televisão de Moçambique em Portugal desde 2022. Antiga apresentadora do programa Bem-vindos da RTP-África e profissional de media com vasta experiência internacional.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Formada em Linguística e Literatura, atualmente estudante de Doutoramento em Estudos Africanos no ISCTE-IUL.
+              </p>
+            </div>
+          </div>
+
+          {/* SEPARADOR */}
+          <div className="my-16 border-t border-gray-200"></div>
+
+          {/* MEMBRO 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="order-2 md:order-1">
+              <h3 className="text-4xl font-bold text-blue-900 mb-4">Ana Lúcia Jardim Leal</h3>
+              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">Membro do Conselho de Administração</div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Administradora na Sociedade Vila dos Números - SIGI, S.A com responsabilidade em Direção Fiscal e Financeira e Direção Comercial e Planeamento. CEO da EDINOK desde 2022.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Administradora na Vila dos Números, S.A entre 2016 e 2022. Manager de Corporate Strategy na Voxatlas e Project Manager na Bravegeneration. Experiência internacional em gestão de projetos e qualidade operacional.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Formada em Geografia pela Universidade de Lisboa. Mestre em Gestão de Projetos pelo ISCTE com especialização em investimento imobiliário.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl h-96 flex items-center justify-center text-white text-9xl overflow-hidden shadow-xl">
+              👩‍💻
             </div>
           </div>
         </div>
