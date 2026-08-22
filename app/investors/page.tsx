@@ -18,6 +18,9 @@ export default function InvestorsPage() {
             <a href="/#projetos" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
               PROJETOS
             </a>
+            <a href="/#equipa" className="text-gray-700 hover:text-blue-900 transition text-sm font-medium">
+              EQUIPA
+            </a>
             <a href="/investors" className="text-blue-900 transition text-sm font-medium border-b-2 border-blue-900">
               INVESTIDORES
             </a>
