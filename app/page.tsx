@@ -701,58 +701,105 @@ export default function Home() {
       </section>
 
       {/* CONTACTO */}
-      <section id="contacto" className="py-24 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-4 text-center">Entre em Contacto</h2>
-          <p className="text-center text-blue-100 text-lg mb-16">Fale connosco sobre as oportunidades de investimento</p>
+      <section id="contacto" className="py-20 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* ESQUERDA - CONTACTOS */}
+            <div>
+              <h2 className="text-5xl font-bold text-blue-900 mb-4">Entre em Contacto</h2>
+              <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+                Contacte-nos para conhecer as oportunidades de investimento em imobiliário português.
+              </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-5xl mb-4">📧</div>
-              <p className="text-sm text-blue-300 mb-2">EMAIL</p>
-              <a href="mailto:geral@viladosnumeros.com" className="text-white hover:text-blue-200 font-bold">
-                geral@viladosnumeros.com
-              </a>
+              {/* 3 CARDS DE CONTACTO */}
+              <div className="space-y-8">
+                {/* EMAIL */}
+                <div>
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Email</p>
+                  <a href="mailto:geral@viladosnumeros.com" className="text-2xl font-bold text-blue-900 hover:text-blue-600 transition">
+                    geral@viladosnumeros.com
+                  </a>
+                </div>
+
+                {/* TELEFONE */}
+                <div>
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Telefone</p>
+                  <a href="tel:+351913040032" className="text-2xl font-bold text-blue-900 hover:text-blue-600 transition">
+                    +351 913 040 032
+                  </a>
+                </div>
+
+                {/* MORADA */}
+                <div>
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Morada</p>
+                  <p className="text-lg text-blue-900 font-semibold leading-relaxed">
+                    Praça D. António Ribeiro, nº5 10A<br/>
+                    <span className="text-gray-700">1750-371 Lisboa, Portugal</span>
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="text-5xl mb-4">📞</div>
-              <p className="text-sm text-blue-300 mb-2">TELEFONE</p>
-              <a href="tel:913040032" className="text-white hover:text-blue-200 font-bold">
-                +351 913 040 032
-              </a>
-            </div>
+            {/* DIREITA - FORMULÁRIO */}
+            <div>
+              <form className="space-y-6">
+                {/* NOME E EMAIL */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-800 mb-3">Nome *</label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                      placeholder="Seu nome"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-800 mb-3">Email *</label>
+                    <input
+                      type="email"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                      placeholder="seu@email.com"
+                    />
+                  </div>
+                </div>
 
-            <div className="text-center">
-              <div className="text-5xl mb-4">📍</div>
-              <p className="text-sm text-blue-300 mb-2">MORADA</p>
-              <p className="text-white">Praça D. António Ribeiro, nº5 10A<br/>1750-371 Lisboa</p>
+                {/* ASSUNTO */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-3">Assunto</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                    placeholder="Assunto da sua mensagem"
+                  />
+                </div>
+
+                {/* MENSAGEM */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-3">Mensagem *</label>
+                  <textarea
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
+                    placeholder="A sua mensagem..."
+                  ></textarea>
+                </div>
+
+                {/* BOTÃO */}
+                <button
+                  type="submit"
+                  className="w-full bg-blue-900 text-white font-semibold py-4 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105"
+                >
+                  Enviar Mensagem
+                </button>
+
+                <p className="text-xs text-gray-500 text-center">
+                  Os seus dados serão processados de acordo com a nossa política de privacidade.
+                </p>
+              </form>
             </div>
           </div>
-
-          <form className="max-w-2xl mx-auto bg-blue-800 rounded-2xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font-semibold mb-2 text-sm">Nome *</label>
-                <input type="text" className="w-full px-4 py-3 rounded-lg bg-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Seu nome" />
-              </div>
-              <div>
-                <label className="block text-white font-semibold mb-2 text-sm">Email *</label>
-                <input type="email" className="w-full px-4 py-3 rounded-lg bg-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="seu@email.com" />
-              </div>
-            </div>
-            <div className="mb-6">
-              <label className="block text-white font-semibold mb-2 text-sm">Assunto</label>
-              <input type="text" className="w-full px-4 py-3 rounded-lg bg-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Assunto da sua mensagem" />
-            </div>
-            <div className="mb-6">
-              <label className="block text-white font-semibold mb-2 text-sm">Mensagem *</label>
-              <textarea className="w-full px-4 py-3 rounded-lg bg-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows={6} placeholder="Sua mensagem..."></textarea>
-            </div>
-            <button type="submit" className="w-full bg-white text-blue-900 hover:bg-gray-100 font-bold py-3 rounded-lg transition">
-              Enviar Mensagem
-            </button>
-          </form>
         </div>
       </section>
 
