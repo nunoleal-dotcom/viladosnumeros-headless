@@ -46,6 +46,7 @@ const projects = [
     description: 'Fração autónoma destinada a serviços, composta por open space, zona de copa, duas instalações sanitárias e varanda. 139 m² de área útil.',
     locationDescription: 'A zona envolvente é essencialmente habitacional de 1ª habitação com edifícios multifamiliares com cérceas de 5 a 7 pisos em Zona servida de diversidade abrangente de serviços e equipamentos. O imóvel está inserido em zona com infraestruturas executadas com acessos às principais vias de conexão a Lisboa a distarem no máximo 1,7km, aproximadamente. Zona infraestruturada com boa rede de transportes públicos nomeadamente rede municipal rodoviária e rede ferroviária – distando a estação de comboios de Santo Amaro a 1 Km de distância.',
     image: '/images/properties/img-oeiras.jpg',
+    video: '/videos/oeiras.mp4',
     gallery: [
       '/images/properties/img-oeiras.jpg',
       '/images/properties/LOUNGE.jpg',
@@ -100,6 +101,7 @@ const projects = [
     description: 'Oportunidade de investimento no coração do Algarve. Propriedade com excelentes perspectivas de rentabilidade.',
     locationDescription: 'Situado no centro da cidade de Faro, principal artéria da cidade, em zona urbana consolidada, com bons acessos e ótimas áreas de circulação envolvente. Inserida numa zona composta por edifícios de habitação multifamiliar de cércea elevada, com comércio e/ou serviços ao nível do R/C e por vezes 1ºandar. Zona servida em pleno pela rede de transportes públicos municipais, regionais e nacionais. O imóvel está localizado junto das principais infraestruturas urbanas bem como de todos os serviços (tribunal; escolas; superfícies comerciais; cartórios, finanças, conservatórias e outras)',
     image: '/images/properties/QUARTO-STUDIO.jpg',
+    video: '/videos/faro.mp4',
     gallery: [
       '/images/properties/QUARTO-STUDIO.jpg',
       '/images/properties/LOUNGE.jpg',
