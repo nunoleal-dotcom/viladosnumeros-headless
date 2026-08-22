@@ -108,7 +108,7 @@ export default function InvestorsPage() {
         <div className="flex gap-1 mb-8 border-b-2 border-gray-300 overflow-x-auto pb-4">
           <button
             onClick={() => setActiveTab('geral')}
-            className={`px-6 py-3 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'geral'
                 ? 'text-teal-700 border-teal-700'
                 : 'text-gray-600 border-transparent hover:text-teal-700'
@@ -118,7 +118,7 @@ export default function InvestorsPage() {
           </button>
           <button
             onClick={() => setActiveTab('assembleia')}
-            className={`px-6 py-3 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'assembleia'
                 ? 'text-teal-700 border-teal-700'
                 : 'text-gray-600 border-transparent hover:text-teal-700'
@@ -128,7 +128,7 @@ export default function InvestorsPage() {
           </button>
           <button
             onClick={() => setActiveTab('financeira')}
-            className={`px-6 py-3 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'financeira'
                 ? 'text-teal-700 border-teal-700'
                 : 'text-gray-600 border-transparent hover:text-teal-700'
@@ -138,7 +138,7 @@ export default function InvestorsPage() {
           </button>
           <button
             onClick={() => setActiveTab('comunicados')}
-            className={`px-6 py-3 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
+            className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'comunicados'
                 ? 'text-teal-700 border-teal-700'
                 : 'text-gray-600 border-transparent hover:text-teal-700'
@@ -166,7 +166,7 @@ export default function InvestorsPage() {
         </div>
 
         {/* DOCUMENTS LIST */}
-        <div className="space-y-2 mb-8">
+        <div className="space-y-2">
           {getDocuments().length > 0 ? (
             getDocuments().map((doc, index) => (
               <a
