@@ -184,10 +184,10 @@ export default function AboutPage() {
       </div>
 
       {/* FOOTER */}
-      <footer className="bg-gray-900 text-white py-12 mt-20">
+      <footer className="bg-gray-100 text-gray-800 py-8 mt-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <p>&copy; 2026 Vila dos Números, SIGI S.A. Todos os direitos reservados.</p>
-          <p className="text-gray-400 text-sm mt-2">Investimento imobiliário de qualidade em Portugal</p>
+          <p className="font-semibold">&copy; 2026 Vila dos Números, SIGI S.A. Todos os direitos reservados.</p>
+          <p className="text-gray-600 text-sm mt-2">Investimento imobiliário de qualidade em Portugal</p>
         </div>
       </footer>
     </div>
