@@ -617,12 +617,12 @@ export default function Home() {
       <ProjectsSection projects={projects} />
 
       {/* EQUIPA */}
-      <section id="equipa" className="py-24 bg-white">
+      <section id="equipa" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-20 text-blue-900 text-center">Nossa Equipa</h2>
+          <h2 className="text-5xl font-bold mb-20 text-blue-900 text-center">Administração</h2>
 
           {/* MEMBRO 1 */}
-          <div className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="rounded-xl h-96 overflow-hidden shadow-xl">
               <img
                 src="/images/team-member-1.jpg"
@@ -631,37 +631,109 @@ export default function Home() {
               />
             </div>
             <div className="pt-4">
-              <h3 className="text-4xl font-bold text-blue-900 mb-4">Cláudia Daniela Constance Leal</h3>
-              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">Presidente do Conselho de Administração</div>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Administradora na Sociedade Vila dos Números SIGI, S.A. com responsabilidade em Direção Geral de Investimentos e Gestão de Património, Direção Geral de Recursos Humanos e Direção de Comunicação e Marketing.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Desempenha atualmente funções como correspondente da Televisão de Moçambique em Portugal desde 2022. Antiga apresentadora do programa Bem-vindos da RTP-África e profissional de media com vasta experiência internacional.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Formada em Linguística e Literatura, atualmente estudante de Doutoramento em Estudos Africanos no ISCTE-IUL.
-              </p>
+              <h3 className="text-4xl font-bold text-blue-900 mb-2">Cláudia Daniela Constance Leal</h3>
+              <p className="text-sm text-gray-600 mb-4">Nascida a 15 de Março de 1977</p>
+              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-8">Presidente do Conselho de Administração</div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2018 - Presente</h4>
+                  <ul className="text-gray-700 leading-relaxed space-y-2">
+                    <li>✓ Administradora na Sociedade Vila dos Números SIGI, S.A.</li>
+                    <li className="ml-4">• Direção Geral de Investimentos e Gestão de Património</li>
+                    <li className="ml-4">• Direção Geral de Recursos Humanos</li>
+                    <li className="ml-4">• Direção de Comunicação e Marketing</li>
+                    <li>✓ Correspondente da Televisão de Moçambique em Portugal (desde 2022)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2012 - 2018</h4>
+                  <ul className="text-gray-700 leading-relaxed space-y-2">
+                    <li>✓ Apresentadora do programa Bem-vindos da RTP-África</li>
+                    <li>✓ Gestão e Coordenação de Informação e Conteúdos</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2008 - 2010</h4>
+                  <p className="text-gray-700">Gestão e Coordenação de Informação na TV Zimbo em Angola</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2006 - 2008</h4>
+                  <p className="text-gray-700">Coordenadora Geral de Formação e Informação na OCHA/IRIN das Nações Unidas em Angola</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">1998 - 2005</h4>
+                  <p className="text-gray-700">Editora, Jornalista e Apresentadora da Televisão de Moçambique</p>
+                </div>
+
+                <div className="border-t border-gray-300 pt-4">
+                  <p className="text-sm text-gray-700"><span className="font-bold">Formação:</span> Licenciada em Linguística e Literatura. Atualmente estudante de Doutoramento em Estudos Africanos no ISCTE-IUL.</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* SEPARADOR */}
-          <div className="my-16 border-t border-gray-200"></div>
+          <div className="my-16 border-t border-gray-300"></div>
 
           {/* MEMBRO 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="order-2 md:order-1">
-              <h3 className="text-4xl font-bold text-blue-900 mb-4">Ana Lúcia Jardim Leal</h3>
-              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">Membro do Conselho de Administração</div>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Administradora na Sociedade Vila dos Números - SIGI, S.A com responsabilidade em Direção Fiscal e Financeira e Direção Comercial e Planeamento. CEO da EDINOK desde 2022.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Administradora na Vila dos Números, S.A entre 2016 e 2022. Manager de Corporate Strategy na Voxatlas e Project Manager na Bravegeneration. Experiência internacional em gestão de projetos e qualidade operacional.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Formada em Geografia pela Universidade de Lisboa. Mestre em Gestão de Projetos pelo ISCTE com especialização em investimento imobiliário.
-              </p>
+              <h3 className="text-4xl font-bold text-blue-900 mb-2">Ana Lúcia Jardim Leal</h3>
+              <p className="text-sm text-gray-600 mb-4">Nascida a 28 de Setembro de 1977</p>
+              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-8">Vogal do Conselho de Administração</div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2022 - Presente</h4>
+                  <ul className="text-gray-700 leading-relaxed space-y-2">
+                    <li>✓ Administradora na Sociedade Vila dos Números - SIGI, S.A.</li>
+                    <li className="ml-4">• Direção Fiscal e Financeira</li>
+                    <li className="ml-4">• Direção Comercial e de Planeamento</li>
+                    <li>✓ CEO da EDINOK</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2016 - 2022</h4>
+                  <p className="text-gray-700">Administradora na Sociedade Vila dos Números, S.A.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2014 - 2022</h4>
+                  <p className="text-gray-700">Manager de Corporate Strategy na empresa Voxatlas, Unipessoal, Lda.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2015 - 2016</h4>
+                  <p className="text-gray-700">Project Manager na empresa Bravegeneration, S.A.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2010 - 2014</h4>
+                  <p className="text-gray-700">Project Leader - Operational Quality Engineer Department na empresa Nokia Corporation</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2003 - 2010</h4>
+                  <ul className="text-gray-700 leading-relaxed space-y-2">
+                    <li>✓ Geographic Analyst, DMO Q Specialist e Database Quality Engineer na empresa NAVTEQ</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-blue-900 mb-3">2000 - 2003</h4>
+                  <p className="text-gray-700">Gestora de Qualidade na empresa Ensul Meci - Gestão de Projetos de Engenharia, S.A.</p>
+                </div>
+
+                <div className="border-t border-gray-300 pt-4">
+                  <p className="text-sm text-gray-700"><span className="font-bold">Formação:</span> Licenciada em Geografia pela Universidade de Lisboa. Mestre em Gestão de Projetos no Instituto Universitário de Lisboa (ISCTE).</p>
+                </div>
+              </div>
             </div>
             <div className="order-1 md:order-2 rounded-xl h-96 overflow-hidden shadow-xl">
               <img
