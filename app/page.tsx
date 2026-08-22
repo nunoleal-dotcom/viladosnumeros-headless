@@ -3,31 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-async function getPages() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/pages?per_page=100`, {
-      next: { revalidate: 60 }
-    });
-    if (!res.ok) throw new Error('Failed to fetch pages');
-    return res.json();
-  } catch (error) {
-    console.error('Error fetching pages:', error);
-    return [];
-  }
-}
-
-async function getPosts() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/posts?per_page=20`, {
-      next: { revalidate: 60 }
-    });
-    if (!res.ok) throw new Error('Failed to fetch posts');
-    return res.json();
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    return [];
-  }
-}
+// Removed WordPress API calls due to CORS issues - using static project data instead
 
 // Project data with regions and images
 const projects = [
@@ -235,9 +211,7 @@ function ProjectsSection({ projects }: { projects: any[] }) {
   );
 }
 
-export default async function Home() {
-  const pages = await getPages();
-  const posts = await getPosts();
+export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
