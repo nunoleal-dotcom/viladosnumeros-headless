@@ -149,7 +149,7 @@ export default function InvestorsPage() {
         </div>
 
         {/* YEAR FILTER */}
-        <div className="flex gap-3 mb-8 flex-wrap">
+        <div className="flex gap-3 mb-4 flex-wrap">
           {years.map((year) => (
             <button
               key={year}
@@ -166,7 +166,7 @@ export default function InvestorsPage() {
         </div>
 
         {/* DOCUMENTS LIST */}
-        <div className="space-y-3">
+        <div className="space-y-2 mb-8">
           {getDocuments().length > 0 ? (
             getDocuments().map((doc, index) => (
               <a
@@ -195,7 +195,7 @@ export default function InvestorsPage() {
 
 
         {/* CONTACT CTA */}
-        <div className="mt-16 bg-gradient-to-r from-teal-600 to-teal-500 text-white rounded-lg p-12 text-center">
+        <div className="mt-8 bg-gradient-to-r from-teal-600 to-teal-500 text-white rounded-lg p-12 text-center">
           <h3 className="text-3xl font-bold mb-4">Questões ou Informações Adicionais?</h3>
           <p className="text-lg text-teal-100 mb-8">Entre em contacto com o nosso departamento de relações com investidores</p>
           <a href="/#contacto" className="inline-block bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
