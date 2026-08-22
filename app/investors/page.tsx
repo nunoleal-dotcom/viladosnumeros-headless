@@ -193,24 +193,6 @@ export default function InvestorsPage() {
           )}
         </div>
 
-        {/* INFO CARDS */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg border border-gray-200">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Informação Financeira</h3>
-            <p className="text-gray-600">Acesso a contas anuais, relatórios de gestão e informação financeira consolidada</p>
-          </div>
-          <div className="bg-white p-8 rounded-lg border border-gray-200">
-            <div className="text-4xl mb-4">📋</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Documentação Legal</h3>
-            <p className="text-gray-600">Estatutos, certidões permanentes e regulamentos de funcionamento da sociedade</p>
-          </div>
-          <div className="bg-white p-8 rounded-lg border border-gray-200">
-            <div className="text-4xl mb-4">📢</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Comunicados</h3>
-            <p className="text-gray-600">Informações relevantes, press releases e anúncios corporativos</p>
-          </div>
-        </div>
 
         {/* CONTACT CTA */}
         <div className="mt-16 bg-gradient-to-r from-teal-600 to-teal-500 text-white rounded-lg p-12 text-center">
