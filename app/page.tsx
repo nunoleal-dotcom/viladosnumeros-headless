@@ -488,7 +488,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <h2 className="text-7xl font-bold text-white mb-6 leading-tight">Vila dos Números</h2>
             <p className="text-2xl text-gray-100 mb-8 leading-relaxed">
-              Especializada em investimento imobiliário de médio e longo prazo em Portugal. Portfólio estratégico nas regiões de Grande Lisboa e Algarve.
+              Uma Sociedade de Investimento e Gestão Imobiliária (SIGI) atuando no setor multifamiliar, focado no desenvolvimento, reabilitação, aquisição e gestão de comunidades residenciais distintas em mercados selecionados em Portugal.
             </p>
             <div className="flex gap-4">
               <a href="#projetos" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition text-lg">
