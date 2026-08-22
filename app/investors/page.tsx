@@ -85,22 +85,19 @@ export default function InvestorsPage() {
       </header>
 
       {/* HERO */}
-      <section className="bg-white border-b-2 border-gray-200 py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-2">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Acionistas e Investidores</h2>
-              <p className="text-lg text-gray-700">
-                Informação corporativa, documentação legal e relatórios financeiros
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg h-64 md:h-auto">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop"
-                alt="Portfólio de Projetos"
-                className="w-full h-full object-cover hover:scale-105 transition duration-300"
-              />
-            </div>
+      <section className="relative h-96 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=500&fit=crop"
+          alt="Portfólio de Projetos"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto px-6 w-full">
+            <h2 className="text-5xl font-bold text-white mb-4">Acionistas e Investidores</h2>
+            <p className="text-xl text-gray-100">
+              Informação corporativa, documentação legal e relatórios financeiros
+            </p>
           </div>
         </div>
       </section>
