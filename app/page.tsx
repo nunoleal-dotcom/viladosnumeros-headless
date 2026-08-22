@@ -38,7 +38,8 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação de Qualidade',
     description: 'Projeto de reabilitação em pleno coração de Lisboa',
-    image: '/images/properties/01_RUA-01.jpg'
+    image: '/images/properties/img-ourique.jpg',
+    gallery: ['/images/properties/01_RUA-01.jpg', '/images/properties/01_RUA-02.jpg', '/images/properties/SALA-ESTAR.jpg']
   },
   {
     id: 2,
@@ -47,7 +48,8 @@ const projects = [
     region: 'lisboa',
     type: 'Serviços Comerciais',
     description: 'Espaço comercial moderno na Área de Lisboa',
-    image: '/images/properties/2-Andar-sala.jpg'
+    image: '/images/properties/img-oeiras.jpg',
+    gallery: ['/images/properties/LOUNGE.jpg', '/images/properties/SALA-JANTAR.jpg', '/images/properties/VARANDA.jpg']
   },
   {
     id: 3,
@@ -56,7 +58,8 @@ const projects = [
     region: 'lisboa',
     type: 'Habitação Premium',
     description: 'Propriedade de luxo com vista para o mar',
-    image: '/images/properties/Escadas-detalhe.jpg'
+    image: '/images/properties/moradia-cascais-total.jpg',
+    gallery: ['/images/properties/Escadas-detalhe.jpg', '/images/properties/2-Andar-sala.jpg', '/images/properties/BNH.jpg']
   },
   {
     id: 4,
@@ -65,7 +68,8 @@ const projects = [
     region: 'algarve',
     type: 'Investimento Imobiliário',
     description: 'Oportunidade no coração do Algarve',
-    image: '/images/properties/quarto-2.jpg'
+    image: '/images/properties/QUARTO-STUDIO.jpg',
+    gallery: ['/images/properties/LOUNGE.jpg', '/images/properties/SALA-ESTAR.jpg', '/images/properties/BNH.jpg']
   },
   {
     id: 5,
@@ -74,7 +78,8 @@ const projects = [
     region: 'algarve',
     type: 'Desenvolvimento Rural',
     description: 'Projeto de desenvolvimento sustentável',
-    image: '/images/properties/sala.jpg'
+    image: '/images/properties/sala.jpg',
+    gallery: ['/images/properties/SALA-JANTAR.jpg', '/images/properties/VARANDA.jpg', '/images/properties/QUARTO-STUDIO.jpg']
   },
   {
     id: 6,
@@ -83,7 +88,8 @@ const projects = [
     region: 'algarve',
     type: 'Habitação Residencial',
     description: 'Complexo residencial em zona privilegiada',
-    image: '/images/properties/sanita-torneira.jpg'
+    image: '/images/properties/sanita-torneira.jpg',
+    gallery: ['/images/properties/quarto-2.jpg', '/images/properties/BNH.jpg', '/images/properties/Escadas-detalhe.jpg']
   },
 ];
 
