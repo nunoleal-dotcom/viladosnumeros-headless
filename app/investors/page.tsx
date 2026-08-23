@@ -110,8 +110,8 @@ export default function InvestorsPage() {
             onClick={() => setActiveTab('geral')}
             className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'geral'
-                ? 'text-teal-700 border-teal-700'
-                : 'text-gray-600 border-transparent hover:text-teal-700'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
             }`}
           >
             Informação Geral
@@ -120,8 +120,8 @@ export default function InvestorsPage() {
             onClick={() => setActiveTab('assembleia')}
             className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'assembleia'
-                ? 'text-teal-700 border-teal-700'
-                : 'text-gray-600 border-transparent hover:text-teal-700'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
             }`}
           >
             Assembleia Geral
@@ -130,8 +130,8 @@ export default function InvestorsPage() {
             onClick={() => setActiveTab('financeira')}
             className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'financeira'
-                ? 'text-teal-700 border-teal-700'
-                : 'text-gray-600 border-transparent hover:text-teal-700'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
             }`}
           >
             Informação Financeira
@@ -140,8 +140,8 @@ export default function InvestorsPage() {
             onClick={() => setActiveTab('comunicados')}
             className={`px-6 py-2 font-semibold text-sm uppercase whitespace-nowrap transition border-b-2 ${
               activeTab === 'comunicados'
-                ? 'text-teal-700 border-teal-700'
-                : 'text-gray-600 border-transparent hover:text-teal-700'
+                ? 'text-blue-900 border-blue-900'
+                : 'text-gray-600 border-transparent hover:text-blue-900'
             }`}
           >
             Comunicados
@@ -156,8 +156,8 @@ export default function InvestorsPage() {
               onClick={() => setSelectedYear(year)}
               className={`px-6 py-2 rounded-full font-semibold text-sm transition border-2 ${
                 selectedYear === year
-                  ? 'bg-teal-600 text-white border-teal-600'
-                  : 'bg-white text-teal-600 border-teal-600 hover:bg-teal-50'
+                  ? 'bg-blue-900 text-white border-blue-900'
+                  : 'bg-white text-teal-600 border-blue-900 hover:bg-blue-50'
               }`}
             >
               {year === 'todos' ? 'Todos' : year}
@@ -179,7 +179,7 @@ export default function InvestorsPage() {
                   <span className="text-2xl">📄</span>
                 </div>
                 <div className="flex-grow">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-teal-700 transition leading-tight">{doc.title}</h3>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-900 transition leading-tight">{doc.title}</h3>
                   <p className="text-sm text-gray-500 leading-tight">{doc.date}</p>
                 </div>
                 <div className="flex-shrink-0 text-gray-400 group-hover:text-teal-600 transition">
