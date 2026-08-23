@@ -384,7 +384,7 @@ function ProjectsSection({ projects }: { projects: any[] }) {
     : projects.filter(p => p.region === selectedRegion);
 
   return (
-    <section id="projetos" className="bg-gray-50 py-8">
+    <section id="projetos" className="bg-gray-50 py-8 scroll-mt-32">
       {/* HEADER SECTION - CENTERED */}
       <div className="max-w-7xl mx-auto px-4 mb-4">
         <div className="text-center">
