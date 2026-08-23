@@ -384,11 +384,11 @@ function ProjectsSection({ projects }: { projects: any[] }) {
     : projects.filter(p => p.region === selectedRegion);
 
   return (
-    <section id="projetos" className="bg-gray-50 py-16">
+    <section id="projetos" className="bg-gray-50 py-8">
       {/* HEADER SECTION - CENTERED */}
-      <div className="max-w-7xl mx-auto px-4 mb-12">
+      <div className="max-w-7xl mx-auto px-4 mb-4">
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Nossos Projetos</h2>
+          <h2 className="text-5xl font-bold text-gray-900 mb-2">Nossos Projetos</h2>
           <p className="text-xl text-gray-600">Portfolio de investimento imobiliário com galeria de imagens</p>
         </div>
       </div>
