@@ -385,21 +385,23 @@ function ProjectsSection({ projects }: { projects: any[] }) {
 
   return (
     <section id="projetos" className="py-24 bg-white">
+      {/* HERO IMAGE WITH TEXT OVERLAY */}
+      <div className="mb-16 relative rounded-2xl overflow-hidden shadow-2xl h-96">
+        <img
+          src="/images/projects-hero.jpg"
+          alt="Nossos Projetos"
+          className="w-full h-full object-cover"
+        />
+        {/* OVERLAY ESCURO */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        {/* TEXTO SOBREPOSTO */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start p-12">
+          <h2 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">Nossos Projetos</h2>
+          <p className="text-2xl text-gray-100 drop-shadow-lg">Portfolio de investimento imobiliário com galeria de imagens</p>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="text-5xl font-bold text-blue-900 mb-4">Nossos Projetos</h2>
-          <p className="text-xl text-gray-600">Portfolio de investimento imobiliário com galeria de imagens</p>
-        </div>
-
-        {/* HERO IMAGE */}
-        <div className="mb-16 rounded-xl overflow-hidden shadow-lg h-96">
-          <img
-            src="/images/projects-hero.jpg"
-            alt="Nossos Projetos"
-            className="w-full h-full object-cover hover:scale-105 transition duration-300"
-          />
-        </div>
-
         {/* FILTROS INTERATIVOS */}
         <div className="flex gap-4 mb-12 overflow-x-auto pb-2">
           <button
