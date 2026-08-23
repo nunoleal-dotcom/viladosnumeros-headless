@@ -195,23 +195,102 @@ export default function InvestorsPage() {
         </div>
 
 
-        {/* CONTACT INFO */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Contacte-nos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-amber-50 p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-4xl">📧</span>
-                <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Email</p>
+        {/* CONTACT FORM */}
+        <div className="mt-16 bg-white border border-gray-200 rounded-2xl p-12 shadow-lg">
+          <h3 className="text-3xl font-bold text-blue-900 mb-2 text-center">Contacte-nos</h3>
+          <p className="text-gray-600 text-center mb-8">Envie-nos uma mensagem e entraremos em contacto dentro de 24 horas</p>
+
+          <form className="space-y-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Nome Completo *</label>
+                <input
+                  type="text"
+                  placeholder="João Silva"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                  required
+                />
               </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                <input
+                  type="email"
+                  placeholder="joao@empresa.com"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Empresa</label>
+                <input
+                  type="text"
+                  placeholder="Nome da sua empresa"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Telefone</label>
+                <input
+                  type="tel"
+                  placeholder="+351 913 040 032"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Assunto *</label>
+              <input
+                type="text"
+                placeholder="Qual é o assunto da sua mensagem?"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Mensagem *</label>
+              <textarea
+                placeholder="Descreva em detalhes a sua mensagem..."
+                rows={5}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
+                required
+              />
+            </div>
+
+            <div className="flex items-center gap-3 pt-4">
+              <input type="checkbox" id="agree" className="w-4 h-4 text-blue-900 rounded focus:ring-2 focus:ring-blue-500" />
+              <label htmlFor="agree" className="text-sm text-gray-600">
+                Concordo que os meus dados sejam processados de acordo com a <a href="#" className="text-blue-900 font-semibold hover:underline">política de privacidade</a>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-900 text-white font-semibold py-3 rounded-lg hover:bg-blue-800 transition duration-200 mt-8"
+            >
+              Enviar Mensagem
+            </button>
+          </form>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-gray-200">
+            <div className="text-center">
+              <div className="text-3xl mb-3">📧</div>
+              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Email</p>
               <p className="text-lg font-semibold text-gray-900">investidores@viladosnumeros.com</p>
             </div>
-            <div className="bg-amber-50 p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-4xl">📞</span>
-                <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Telefone</p>
-              </div>
+            <div className="text-center">
+              <div className="text-3xl mb-3">📞</div>
+              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Telefone</p>
               <p className="text-lg font-semibold text-gray-900">+351 913 040 032</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-3">📍</div>
+              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Localização</p>
+              <p className="text-lg font-semibold text-gray-900">Lisboa, Portugal</p>
             </div>
           </div>
         </div>
