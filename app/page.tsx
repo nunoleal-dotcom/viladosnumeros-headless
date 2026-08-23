@@ -385,19 +385,17 @@ function ProjectsSection({ projects }: { projects: any[] }) {
 
   return (
     <section id="projetos" className="py-24 bg-white">
-      {/* HERO IMAGE WITH TEXT OVERLAY */}
+      {/* HERO IMAGE WITH TEXT OVERLAY - NO OVERLAY */}
       <div className="mb-16 relative rounded-2xl overflow-hidden shadow-2xl h-80 max-w-4xl">
         <img
           src="/images/projects-hero.jpg"
           alt="Nossos Projetos"
           className="w-full h-full object-cover"
         />
-        {/* OVERLAY LEVE */}
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        {/* TEXTO SOBREPOSTO */}
-        <div className="absolute inset-0 flex flex-col justify-center items-start p-12">
-          <h2 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">Nossos Projetos</h2>
-          <p className="text-xl text-gray-100 drop-shadow-lg">Portfolio de investimento imobiliário com galeria de imagens</p>
+        {/* TEXTO SOBREPOSTO - SEM OVERLAY */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start p-12 bg-gradient-to-r from-black from-30% to-transparent">
+          <h2 className="text-5xl font-bold text-white mb-4">Nossos Projetos</h2>
+          <p className="text-xl text-gray-100">Portfolio de investimento imobiliário com galeria de imagens</p>
         </div>
       </div>
 
