@@ -16,7 +16,7 @@ const projects = [
     description: 'Propriedade Total, composto por R/C, 1º andar, 2º andar e águas-furtadas. 239 m² de área de construção. Totalmente renovado.',
     locationDescription: 'Prédio urbano, inserido numa zona estabilizada e residencial de 1ª habitação onde ocorrem outros tipos de ocupação compatíveis com habitação servida de todo o tipo de equipamentos, serviços e comércio local bem como alojamento local (turismo)',
     image: '/images/properties/campo-ourique-1.jpg',
-    video: '/videos/campo-ourique.mp4',
+    video: '/videos/campo-ourique-promo.mp4',
     gallery: [
       '/images/properties/campo-ourique-1.jpg',
       '/images/properties/campo-ourique-2.jpg',
