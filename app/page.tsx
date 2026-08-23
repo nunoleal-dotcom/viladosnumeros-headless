@@ -208,6 +208,7 @@ function ImageCarousel({ images }: { images: string[] }) {
           autoPlay
           muted
           playsInline
+          loop
         />
       ) : (
         <img
