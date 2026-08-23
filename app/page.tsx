@@ -391,6 +391,15 @@ function ProjectsSection({ projects }: { projects: any[] }) {
           <p className="text-xl text-gray-600">Portfolio de investimento imobiliário com galeria de imagens</p>
         </div>
 
+        {/* HERO IMAGE */}
+        <div className="mb-16 rounded-xl overflow-hidden shadow-lg h-96">
+          <img
+            src="/images/projects-hero.jpg"
+            alt="Nossos Projetos"
+            className="w-full h-full object-cover hover:scale-105 transition duration-300"
+          />
+        </div>
+
         {/* FILTROS INTERATIVOS */}
         <div className="flex gap-4 mb-12 overflow-x-auto pb-2">
           <button
