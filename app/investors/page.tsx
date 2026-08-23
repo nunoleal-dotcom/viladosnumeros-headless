@@ -276,20 +276,17 @@ export default function InvestorsPage() {
             </button>
           </form>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-3xl mb-3">📧</div>
-              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Email</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 pt-12 border-t border-gray-200">
+            <div className="bg-amber-50 p-6 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+              <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-3">Email</p>
               <p className="text-lg font-semibold text-gray-900">investidores@viladosnumeros.com</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">📞</div>
-              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Telefone</p>
+            <div className="bg-amber-50 p-6 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+              <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-3">Telefone</p>
               <p className="text-lg font-semibold text-gray-900">+351 913 040 032</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">📍</div>
-              <p className="text-sm text-gray-600 font-semibold uppercase tracking-wide mb-2">Localização</p>
+            <div className="bg-amber-50 p-6 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+              <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-3">Localização</p>
               <p className="text-lg font-semibold text-gray-900">Lisboa, Portugal</p>
             </div>
           </div>
