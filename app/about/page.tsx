@@ -81,6 +81,14 @@ export default function AboutPage() {
         </div>
       </header>
 
+      {/* BREADCRUMBS */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-3 text-sm text-gray-600">
+          <a href="/" className="hover:text-blue-900">Home</a> <span className="mx-2">/</span>
+          <span className="text-gray-900 font-semibold">Equipa</span>
+        </div>
+      </div>
+
       {/* HERO */}
       <section className="relative h-32 overflow-hidden">
         <img
