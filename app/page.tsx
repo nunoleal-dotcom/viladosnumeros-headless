@@ -755,26 +755,46 @@ export default function Home() {
       </section>
 
       {/* SERVIÇOS */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-16 text-blue-900">Nossos Serviços</h2>
+          <h2 className="text-5xl font-bold mb-4 text-blue-900 text-center">Nossos Serviços</h2>
+          <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto">Soluções completas de investimento imobiliário com foco em crescimento e rentabilidade</p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group border-l-4 border-blue-900 pl-6 py-4 hover:border-blue-600 transition">
-              <div className="text-5xl mb-4 group-hover:scale-110 transition">🔍</div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Aquisição de Propriedades</h4>
-              <p className="text-gray-700 leading-relaxed">Identificação e aquisição de propriedades com elevado potencial de valorização em mercados selecionados.</p>
+            {/* SERVIÇO 1 */}
+            <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">🔍</div>
+              <h4 className="text-2xl font-bold text-blue-900 mb-4">Aquisição de Propriedades</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">Identificação e aquisição estratégica de propriedades com elevado potencial de valorização em mercados selecionados.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Análise de mercado detalhada</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Due diligence completa</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Negociação estratégica</li>
+              </ul>
             </div>
 
-            <div className="group border-l-4 border-blue-600 pl-6 py-4 hover:border-blue-900 transition">
-              <div className="text-5xl mb-4 group-hover:scale-110 transition">🔨</div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Desenvolvimento e Reabilitação</h4>
-              <p className="text-gray-700 leading-relaxed">Projetos de qualidade em propriedades urbanas, rurais ou mistas com foco em agregação de valor.</p>
+            {/* SERVIÇO 2 */}
+            <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">🏗️</div>
+              <h4 className="text-2xl font-bold text-blue-900 mb-4">Desenvolvimento e Reabilitação</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">Projetos de qualidade em propriedades urbanas, rurais ou mistas com foco em agregação de valor.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Gestão de projetos</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Reabilitação premium</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Qualidade garantida</li>
+              </ul>
             </div>
 
-            <div className="group border-l-4 border-blue-800 pl-6 py-4 hover:border-blue-600 transition">
-              <div className="text-5xl mb-4 group-hover:scale-110 transition">💼</div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Gestão de Portfólio</h4>
-              <p className="text-gray-700 leading-relaxed">Constituição e gestão estratégica de portfólio imobiliário com maximização de retorno.</p>
+            {/* SERVIÇO 3 */}
+            <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">💼</div>
+              <h4 className="text-2xl font-bold text-blue-900 mb-4">Gestão de Portfólio</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">Constituição e gestão estratégica de portfólio imobiliário com maximização de retorno.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Diversificação geográfica</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Otimização de ROI</li>
+                <li className="flex items-center"><span className="text-blue-900 mr-2">✓</span> Relatórios mensais</li>
+              </ul>
             </div>
           </div>
         </div>
