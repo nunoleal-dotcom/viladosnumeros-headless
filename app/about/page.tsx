@@ -127,21 +127,34 @@ export default function AboutPage() {
 
         {/* TEAM MEMBERS */}
         <div className="space-y-4">
-          {getMembers().map((member, index) => (
-            <div key={index} className="bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md transition">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-xl">👤</span>
-                </div>
-                <div className="flex-grow">
-                  <h3 className="font-semibold text-gray-900 leading-tight">{member.name}</h3>
-                  <p className="text-sm text-blue-900 font-semibold leading-tight">{member.role}</p>
-                  <p className="text-xs text-gray-500 leading-tight">{member.date}</p>
-                  <p className="text-sm text-gray-600 mt-1">{member.bio}</p>
+          {getMembers().map((member, index) => {
+            const initials = member.name.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase();
+            const colors = [
+              'bg-blue-500',
+              'bg-purple-500',
+              'bg-pink-500',
+              'bg-indigo-500',
+              'bg-teal-500',
+              'bg-orange-500'
+            ];
+            const bgColor = colors[index % colors.length];
+
+            return (
+              <div key={index} className="bg-white p-3 rounded-lg border border-gray-200 hover:shadow-md transition">
+                <div className="flex items-start gap-4">
+                  <div className={`flex-shrink-0 w-12 h-12 ${bgColor} rounded-full flex items-center justify-center`}>
+                    <span className="text-lg font-bold text-white">{initials}</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-900 leading-tight">{member.name}</h3>
+                    <p className="text-sm text-blue-900 font-semibold leading-tight">{member.role}</p>
+                    <p className="text-xs text-gray-500 leading-tight">{member.date}</p>
+                    <p className="text-sm text-gray-600 mt-1">{member.bio}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
