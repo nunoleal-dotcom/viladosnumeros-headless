@@ -763,7 +763,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* SERVIÇO 1 */}
             <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">🔍</div>
+              <div className="h-2 w-16 bg-blue-900 rounded-full mb-6 group-hover:w-24 transition-all duration-300"></div>
               <h4 className="text-2xl font-bold text-blue-900 mb-4">Aquisição de Propriedades</h4>
               <p className="text-gray-700 leading-relaxed mb-4">Identificação e aquisição estratégica de propriedades com elevado potencial de valorização em mercados selecionados.</p>
               <ul className="space-y-2 text-sm text-gray-600">
@@ -775,7 +775,7 @@ export default function Home() {
 
             {/* SERVIÇO 2 */}
             <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">🏗️</div>
+              <div className="h-2 w-16 bg-blue-900 rounded-full mb-6 group-hover:w-24 transition-all duration-300"></div>
               <h4 className="text-2xl font-bold text-blue-900 mb-4">Desenvolvimento e Reabilitação</h4>
               <p className="text-gray-700 leading-relaxed mb-4">Projetos de qualidade em propriedades urbanas, rurais ou mistas com foco em agregação de valor.</p>
               <ul className="space-y-2 text-sm text-gray-600">
@@ -787,7 +787,7 @@ export default function Home() {
 
             {/* SERVIÇO 3 */}
             <div className="group bg-white rounded-2xl p-8 border-2 border-blue-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="text-6xl mb-6 group-hover:scale-110 transition duration-300">💼</div>
+              <div className="h-2 w-16 bg-blue-900 rounded-full mb-6 group-hover:w-24 transition-all duration-300"></div>
               <h4 className="text-2xl font-bold text-blue-900 mb-4">Gestão de Portfólio</h4>
               <p className="text-gray-700 leading-relaxed mb-4">Constituição e gestão estratégica de portfólio imobiliário com maximização de retorno.</p>
               <ul className="space-y-2 text-sm text-gray-600">
