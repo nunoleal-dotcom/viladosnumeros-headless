@@ -385,43 +385,10 @@ function ProjectsSection({ projects }: { projects: any[] }) {
 
   return (
     <section id="projetos" className="bg-white">
-      {/* HERO IMAGE FULL WIDTH */}
-      <div className="relative w-full h-96 overflow-hidden mb-0">
-        <img
-          src="/images/projects-hero.jpg"
-          alt="Nossos Projetos"
-          className="w-full h-full object-cover"
-        />
-        {/* TEXTO CONTAINER NARROWER */}
-        <div className="absolute inset-0 flex flex-col justify-center items-start bg-gradient-to-r from-black from-30% to-transparent">
-          <div className="max-w-2xl px-12">
-            <h2 className="text-5xl font-bold text-white mb-4">Nossos Projetos</h2>
-            <p className="text-xl text-gray-100">Portfolio de investimento imobiliário com galeria de imagens</p>
-          </div>
-        </div>
-      </div>
-
-      {/* VIDEO CAROUSEL SECTION */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Vídeos dos Projetos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.filter((p: any) => p.video).slice(0, 3).map((project: any, idx: number) => (
-              <div key={idx} className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                <video
-                  src={project.video}
-                  className="w-full h-64 object-cover bg-gray-900"
-                  controls
-                  poster={project.image}
-                />
-                <div className="p-4 bg-white">
-                  <h4 className="font-bold text-gray-900">{project.name}</h4>
-                  <p className="text-sm text-gray-600">📍 {project.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* HEADER SECTION */}
+      <div className="py-12 max-w-2xl">
+        <h2 className="text-5xl font-bold text-gray-900 mb-4">Nossos Projetos</h2>
+        <p className="text-xl text-gray-600">Portfolio de investimento imobiliário com galeria de imagens</p>
       </div>
 
       <div className="py-24 max-w-7xl mx-auto px-4">
