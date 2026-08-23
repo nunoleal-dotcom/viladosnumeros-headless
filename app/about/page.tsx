@@ -149,14 +149,14 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-6 py-8">
         <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Contacte-nos</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+          <div className="bg-amber-50 p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
             <div className="flex items-center gap-4 mb-4">
               <span className="text-4xl">📧</span>
               <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Email</p>
             </div>
             <p className="text-lg font-semibold text-gray-900">investidores@viladosnumeros.com</p>
           </div>
-          <div className="bg-white p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+          <div className="bg-amber-50 p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
             <div className="flex items-center gap-4 mb-4">
               <span className="text-4xl">📞</span>
               <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Telefone</p>
