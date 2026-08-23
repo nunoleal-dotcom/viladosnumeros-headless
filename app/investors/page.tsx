@@ -196,22 +196,22 @@ export default function InvestorsPage() {
 
 
         {/* CONTACT INFO */}
-        <div className="mt-16 bg-white rounded-lg border border-gray-200 p-8">
-          <h3 className="text-2xl font-bold text-blue-900 mb-6">Contacte-nos</h3>
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Contacte-nos</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-4">
-              <span className="text-2xl flex-shrink-0">📧</span>
-              <div>
-                <p className="text-sm text-gray-600 font-semibold uppercase">Email</p>
-                <p className="text-gray-900 font-medium">investidores@viladosnumeros.com</p>
+            <div className="bg-white p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl">📧</span>
+                <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Email</p>
               </div>
+              <p className="text-lg font-semibold text-gray-900">investidores@viladosnumeros.com</p>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="text-2xl flex-shrink-0">📞</span>
-              <div>
-                <p className="text-sm text-gray-600 font-semibold uppercase">Telefone</p>
-                <p className="text-gray-900 font-medium">+351 913 040 032</p>
+            <div className="bg-white p-8 rounded-xl border-2 border-blue-100 shadow-md hover:shadow-lg hover:border-blue-200 transition">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl">📞</span>
+                <p className="text-sm text-gray-600 font-bold uppercase tracking-wide">Telefone</p>
               </div>
+              <p className="text-lg font-semibold text-gray-900">+351 913 040 032</p>
             </div>
           </div>
         </div>
